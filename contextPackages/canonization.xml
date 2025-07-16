@@ -1,0 +1,79 @@
+<contextPackage>
+  <meta>
+    <generated>2025-07-16T15:30:00-04:00</generated>
+    <purpose>Set up canonicalization, verification, and IP safeguards for MCP + context-integrity MVP</purpose>
+  </meta>
+  <environment>
+    <repository visibility="private"/>
+    <tools>
+      <tool name="ctx-new.ps1" role="snapshot generator"/>
+      <tool name="ctx-loader.ps1" role="canonicalization & verification loader"/>
+      <tool name="PowerShell" role="execution environment"/>
+      <tool name="Node.js" role="alternative loader environment"/>
+      <tool name="OpenAI Codex API" role="optional refactoring assistant"/>
+      <alternative name="StarCoder (local via Ollama)" role="offline refactoring"/>
+    </tools>
+  </environment>
+  <requirements>
+    <requirement id="1">
+      <description>Enhance ctx-new.ps1</description>
+      <action>
+        Canonicalize the XML copy before computing SHA-256 by:
+        <list>
+          <item>Stripping XML comments and processing instructions</item>
+          <item>Collapsing whitespace sequences to single spaces and trimming text nodes</item>
+          <item>Sorting each element’s attributes lexicographically</item>
+          <item>Serializing the result without an XML declaration (UTF-8, no BOM)</item>
+        </list>
+      </action>
+    </requirement>
+    <requirement id="2">
+      <description>Verify loader script</description>
+      <action>
+        Ensure ctx-loader.ps1/js:
+        <list>
+          <item>Reads the same canonicalization process</item>
+          <item>Computes and compares SHA-256 against the <sha256> element</item>
+          <item>Emits success (🟢 CONTEXT LOADED) or failure (🔴 CONTEXT INTEGRITY VIOLATION)</item>
+        </list>
+      </action>
+    </requirement>
+    <requirement id="3">
+      <description>Test with real context file</description>
+      <action>
+        Run loader against your actual `userContext_2025-07-16.xml`, capture:
+        <list>
+          <item>Canonical XML string</item>
+          <item>SHA-256 digest</item>
+        </list>
+      </action>
+    </requirement>
+    <requirement id="4">
+      <description>Secure IP priority</description>
+      <action>
+        File a provisional patent application covering:
+        <list>
+          <item>Canonicalization method</item>
+          <item>SHA-256 signature injection</item>
+          <item>Assistant-side integrity enforcement and drift detection</item>
+        </list>
+        <note>Do this before any public disclosure of code or schema.</note>
+      </action>
+    </requirement>
+    <requirement id="5">
+      <description>Maintain privacy until filing</description>
+      <action>
+        Keep the repo private or use a throw-away public mirror for AI assistance only, then delete or privatize post-filing.
+      </action>
+    </requirement>
+  </requirements>
+  <instructions>
+    Provide this XML to the next ChatGPT session. The assistant there should:
+    <list>
+      <item>Implement the script updates as described</item>
+      <item>Run the canonicalization and hash verification</item>
+      <item>Confirm real outputs back in XML</item>
+      <item>Then resume the staged proceedings before the Judge, treating these steps as completed</item>
+    </list>
+  </instructions>
+</contextPackage>
