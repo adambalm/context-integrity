@@ -1,0 +1,42 @@
+<contextSnapshot>
+  <meta>
+    <name>UserStories</name>
+    <version>1.0</version>
+    <timestamp>2025-07-16T16:45:00-04:00</timestamp>
+  </meta>
+  <document format="markdown">
+    <![CDATA[
+# User Stories
+
+## 1. CLI-Focused Power User  
+**As** a prompt-engineer,  
+**I want** to run a single `ctx-loader` command in my terminal before I start a session,  
+**so that** my workflow state is injected and validated without any manual copy/paste.
+
+## 2. Web UI Enthusiast  
+**As** a non-technical user working in the ChatGPT web interface,  
+**I want** a simple browser extension or bookmarklet that auto-prepends my signed context to every new chat,  
+**so that** I don’t have to learn PowerShell or Node.js and I never lose my preferences or project state.
+
+## 3. Multi-Device Knowledge Worker  
+**As** someone who switches between laptop, tablet, and phone,  
+**I want** my context snapshot to sync automatically (via GitHub Gist or cloud storage) and be loaded wherever I’m chatting,  
+**so that** I can pick up mid-project without re-explaining anything.
+
+## 4. CI/CD Integrator  
+**As** an SRE or DevOps engineer,  
+**I want** every merge to `contexts/` to trigger an automated integrity check,  
+**so that** no unsigned or drifted context ever reaches production workflows.
+
+## 5. Collaborative Team Member  
+**As** part of a distributed team using Ghost CMS and n8n,  
+**I want** our shared context snapshot to carry a single trust-able hash in every Ghost post’s metadata and n8n webhook,  
+**so that** we all work off the same memory contract and can audit who loaded what when.
+
+## 6. Audit & Compliance Officer  
+**As** a compliance lead in a regulated industry,  
+**I want** a log of every context load (timestamp + SHA + user ID),  
+**so that** I can prove what the model “knew” when it made decisions or generated recommendations.
+    ]]>
+  </document>
+</contextSnapshot>
