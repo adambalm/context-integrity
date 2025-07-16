@@ -1,0 +1,116 @@
+```xml
+<contextSnapshot>
+  <meta>
+    <name>ContextIntegrityPRD</name>
+    <version>1.0</version>
+    <timestamp>2025-07-16T16:30:00-04:00</timestamp>
+  </meta>
+  <document format="markdown">
+    <![CDATA[
+# Context-Integrity MVP PRD
+
+**Title:** Context-Integrity MVP  
+**Last Updated:** 2025-07-16
+
+---
+
+## 1. Objective  
+Enable a **one-command load** and **real-time integrity enforcement** of user/project/environment context in LLM sessions, eliminating drift and re-explanation.
+
+---
+
+## 2. Success Criteria  
+- **Load Verification:**  
+  Running  
+  \`\`\`bash
+  pwsh tools/ctx-loader.ps1 contexts/contextIntegrity_v1.0_<DATE>.xml
+  \`\`\`  
+  prints:
+  \`\`\`
+  🟢 CONTEXT LOADED: contextIntegrity_v1.0_<DATE>.xml
+  \`\`\`
+- **Drift Control:**  
+  Every assistant response is checked for the banner; missing banner → session halted with:
+  \`\`\`
+  🔴 CONTEXT VIOLATION
+  \`\`\`
+- **Patent Safeguard:**  
+  Provisional patent application filed covering canonicalization, SHA-signing, loader/enforcement logic  
+- **Ease of Use:**  
+  No manual copy/paste of context beyond invoking \`ctx-loader\`
+
+---
+
+## 3. Scope  
+
+### In-Scope  
+- XML canonicalization (comment stripping, whitespace collapse, attribute sorting)  
+- SHA-256 injection via \`ctx-new.ps1\`  
+- Loader script (\`ctx-loader.ps1\` / \`.js\`) for verification & banner injection  
+- Middleware or callback that validates the banner on each turn
+
+### Out-of-Scope (Phase 1)  
+- GUI/IDE plugins  
+- CI/CD dashboards & GitHub Actions  
+- Multi-agent (n8n, Ghost) integrations  
+- Challenge-question drift audits  
+- External watchdog processes
+
+---
+
+## 4. User Flow  
+1. **Snapshot Creation**  
+   \`\`\`bash
+   # create & sign new snapshot
+   pwsh tools/ctx-new.ps1 contextIntegrity 2025-07-23
+   \`\`\`
+2. **Session Start**  
+   \`\`\`bash
+   pwsh tools/ctx-loader.ps1 contexts/contextIntegrity_v1.0_2025-07-23.xml
+   # → 🟢 CONTEXT LOADED...
+   # → [system prompt injected with context banner]
+   # → Chat session opens
+   \`\`\`
+3. **Drift Enforcement**  
+   \`\`\`python
+   # After each assistant reply:
+   assert reply.startswith("🟢 CONTEXT LOADED")
+   # On failure:
+   raise DriftError("🔴 CONTEXT VIOLATION")
+   \`\`\`
+
+---
+
+## 5. Dependencies  
+- **Runtimes:** PowerShell 7+ or Node.js  
+- **Repo structure:**
+  \`\`\`
+  context-integrity/
+  ├─ contexts/
+  │   └─ contextIntegrity_v1.0_<DATE>.xml
+  ├─ contextPackages/
+  └─ tools/
+      ├─ ctx-new.ps1
+      └─ ctx-loader.ps1
+  \`\`\`
+- **IP Counsel** for provisional filing
+
+---
+
+## 6. Timeline & Milestones  
+
+| Week | Deliverable                                        |
+|------|----------------------------------------------------|
+| 1    | Finalize canonicalizer & ctx-new.ps1 enhancements |
+| 2    | Build ctx-loader + banner-check middleware         |
+| 3    | Internal demo, docs, file provisional patent       |
+
+---
+
+## 7. Risks & Mitigations  
+- **User skips loader** → loader must \`exit 1\` with clear error; script alias promotes consistency  
+- **Model ignores banner** → enforcement in client code, not prompt alone  
+- **Premature disclosure** → keep repo private until provisional filed  
+    ]]>
+  </document>
+</contextSnapshot>
