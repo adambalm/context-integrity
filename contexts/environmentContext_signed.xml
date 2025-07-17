@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<environmentContext>
+  <date>2025-07-17</date>
+  <os>Windows 8</os>
+  <shell>MINGW64 (Git Bash)</shell>
+  <tools>
+    <python>3.10.11</python>
+    <pip>25.1.1</pip>
+    <lxml>6.0.0</lxml>
+    <git>2.50.1.windows.1</git>
+    <openssl>3.2.4</openssl>
+  </tools>
+<sha256>295a3a463f077d0536039e190bfffd21a7fccd72a9de79be264b8dac534094e8</sha256></environmentContext>
