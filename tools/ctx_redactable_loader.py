@@ -37,7 +37,7 @@ def load_and_verify_redactable(file_path: str) -> None:
                 # NOT redacted: verify the content by re-hashing.
                 # CRITICAL: We re-canonicalize to bytes and hash directly,
                 # using the exact same method as the signer.
-                canonical_bytes_to_verify = etree.tostring(elem, method='c14n2')
+                canonical_bytes_to_verify = etree.tostring(elem, method='c14n')
                 calculated_leaf_hash = hashlib.sha256(canonical_bytes_to_verify).hexdigest()
 
                 if calculated_leaf_hash != leaf_hash_from_attr:
