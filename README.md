@@ -2,11 +2,11 @@
 
 A cryptographic context management system for LLM sessions that prevents context drift through XML canonicalization, SHA-256 signing, and runtime verification.
 
-## 🎯 Purpose
+## Purpose
 
 Eliminate context drift in LLM conversations by providing **one-command context loading** with **real-time integrity enforcement**. When context integrity is violated, sessions halt with a clear violation signal.
 
-## ✨ Features
+## Features
 
 ### Core Capabilities
 - **Cryptographic Context Signing**: SHA-256 signatures with XML canonicalization
@@ -20,7 +20,7 @@ Eliminate context drift in LLM conversations by providing **one-command context 
 - **HIPAA-Ready Design**: Architecture prepared for compliance requirements
 - **Granular Integrity**: Each XML element can be independently validated
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Context Operations
 
@@ -48,7 +48,7 @@ python tools/ctx_redactable_loader.py signed_output.xml
 python tools/redact.py signed_output.xml redacted.xml date os
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### Generation 2 Security Model
 
@@ -75,7 +75,7 @@ context-integrity/
 └── docs/               # Project documentation
 ```
 
-## 🔒 Security Features
+## Security Features
 
 ### Cryptographic Integrity
 - **Deterministic Canonicalization**: C14N ensures consistent hashing across platforms
@@ -87,7 +87,7 @@ context-integrity/
 - **Merkle-Tree Verification**: Validate individual elements without full context
 - **HIPAA Preparation**: Architecture designed for healthcare compliance requirements
 
-## 🛣️ Roadmap
+## Roadmap
 
 ### Current (Generation 2)
 - ✅ Merkle-tree-like redactable contexts
@@ -105,17 +105,17 @@ context-integrity/
 - Multi-agent system compatibility
 - External watchdog processes
 
-## 📋 Requirements
+## Requirements
 
 - **Python**: 3.10+
 - **Dependencies**: `lxml` for XML processing
 - **Optional**: PowerShell 7+ for enhanced tooling
 
-## 🤝 Contributing
+## Contributing
 
 This project implements defensive security patterns for LLM context management. Contributions should maintain the cryptographic integrity model and security-first approach.
 
-## 📄 License
+## License
 
 Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
 
