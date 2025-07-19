@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contextSnapshot>
+  <meta>
+    <name>GhostCMSProject</name>
+    <version>1.0</version>
+    <timestamp>2025-07-19T16:45:00-04:00</timestamp>
+    <sha256>pending_generation</sha256>
+  </meta>
+  
+  <projectOverview>
+    <purpose>Publishing platform for Adam Balm vision; originally Sticker Mule job application artifact</purpose>
+    <status>Live deployment with automation pipeline partially implemented</status>
+    <priority>Medium - foundational publishing infrastructure</priority>
+    <repository>ghost-deploy-adambalm (GitHub)</repository>
+    <liveUrl>https://adambalm.io</liveUrl>
+  </projectOverview>
+
+  <technicalArchitecture>
+    <deployment>
+      <platform>Render</platform>
+      <method>GitHub-triggered builds on main branch</method>
+      <containerized>Yes - Ghost CMS in container</containerized>
+      <status>Live and operational</status>
+    </deployment>
+    
+    <theme>
+      <base>Dawn theme (Ghost official)</base>
+      <modifications>
+        <item>External link handling and metadata improvements</item>
+        <item>Plausible Analytics integration (domain-specific)</item>
+        <item>Custom routing via routes.yaml</item>
+        <item>Git-backed development via entrypoint.sh</item>
+      </modifications>
+      <status>Deployed and customized</status>
+    </theme>
+
+    <automationPipeline>
+      <orchestration>n8n (cloud-hosted)</orchestration>
+      <aiLayer>OpenAI (planned, not connected)</aiLayer>
+      <analytics>Plausible Analytics (integrated)</analytics>
+      <searchReserved>Serper.dev (future use)</searchReserved>
+      
+      <currentState>
+        <webhook>
+          <status>Verified via manual POST</status>
+          <authentication>None (security risk)</authentication>
+          <priority>High - needs auth implementation</priority>
+        </webhook>
+        <openaiIntegration>
+          <status>Not connected</status>
+          <plannedUse>Summarization and persona-based analysis</plannedUse>
+        </openaiIntegration>
+        <githubActions>
+          <planned>RSS fetch to replace blocked direct fetch</planned>
+          <status>Not implemented</status>
+        </githubActions>
+      </currentState>
+    </automationPipeline>
+  </technicalArchitecture>
+
+  <environmentConfiguration>
+    <requiredVariables>
+      <var name="PORT">Network port exposed by Ghost</var>
+      <var name="MAIL__SMTP__AUTH__PASS">SMTP password for outbound mail</var>
+      <var name="URL">Canonical site URL for config.production.json</var>
+    </requiredVariables>
+    
+    <runtimeEnvironment>
+      <platform>Render container</platform>
+      <buildTrigger>Push to main branch</buildTrigger>
+      <themeUpdate>Automatic during deployment</themeUpdate>
+    </runtimeEnvironment>
+  </environmentConfiguration>
+
+  <protocolCompliance>
+    <activePersonae>
+      <scrumMaster>Activated via 'scrum', 'scrummaster' keywords</scrumMaster>
+      <blackFlag>Automatic activation on speculative reasoning risk</blackFlag>
+      <redTeam>Adversarial testing mode for architecture</redTeam>
+    </activePersonae>
+    
+    <operatingPrinciples>
+      <miseEnPlace>Tasks only after credentials/tokens confirmed</miseEnPlace>
+      <costAwareness>Active tracking of Render, OpenAI, GitHub Actions, n8n usage</costAwareness>
+      <noPII>No personally identifiable information stored/committed/displayed</noPII>
+    </operatingPrinciples>
+  </protocolCompliance>
+
+  <currentGaps>
+    <security>
+      <gap priority="high">n8n webhook unauthenticated</gap>
+      <gap priority="medium">No citation handling for source attribution</gap>
+    </security>
+    
+    <functionality>
+      <gap>OpenAI integration incomplete</gap>
+      <gap>GitHub Action for RSS fetch not implemented</gap>
+      <gap>Excerpt logic for source attribution missing</gap>
+      <gap>Serper.dev integration not defined</gap>
+    </functionality>
+    
+    <content>
+      <gap priority="low">Author photo needs replacement</gap>
+      <gap>Critical project prompts documentation incomplete</gap>
+    </content>
+  </currentGaps>
+
+  <careerContext>
+    <originalPurpose>Sticker Mule Ghost CMS Administrator application artifact</originalPurpose>
+    <currentPurpose>Publishing platform for Adam Balm philosophical/technical work</currentPurpose>
+    <jobSearchRelevance>Demonstrates rapid deployment and CMS customization skills</jobSearchRelevance>
+    <futureVision>Point of articulation for technology-language convergence work</futureVision>
+  </careerContext>
+
+  <integrationPoints>
+    <contextIntegrity>
+      <relationship>Publishing platform for context-integrity research</relationship>
+      <technicalSynergy>Ghost metadata could carry context hashes</technicalSynergy>
+    </contextIntegrity>
+    
+    <adamBalm>
+      <relationship>Primary publishing venue for philosophical work</relationship>
+      <contentFocus>Technology-language convergence, post-Hiroshima anxiety</contentFocus>
+    </adamBalm>
+    
+    <mcp>
+      <potential>n8n workflow could integrate with MCP protocols</potential>
+      <investigation>Required to determine technical feasibility</investigation>
+    </mcp>
+  </integrationPoints>
+
+  <nextSteps>
+    <immediate priority="high">
+      <step>Implement n8n webhook authentication</step>
+      <step>Define OpenAI integration architecture</step>
+    </immediate>
+    
+    <shortTerm priority="medium">
+      <step>Create GitHub Action for RSS fetch</step>
+      <step>Add citation handling and source attribution</step>
+      <step>Expand Serper.dev integration scope</step>
+    </shortTerm>
+    
+    <longTerm priority="low">
+      <step>Replace author photo</step>
+      <step>Complete critical-project-prompts.md</step>
+    </longTerm>
+  </nextSteps>
+
+  <dependencies>
+    <external>
+      <item>Render platform stability</item>
+      <item>n8n cloud service availability</item>
+      <item>OpenAI API access and costs</item>
+      <item>GitHub Actions quota</item>
+    </external>
+    
+    <internal>
+      <item>Context-integrity project (metadata integration)</item>
+      <item>Career project (job search timeline)</item>
+      <item>Adam Balm content pipeline</item>
+    </internal>
+  </dependencies>
+</contextSnapshot>
