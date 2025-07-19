@@ -3,11 +3,11 @@
   <date sha256_leaf="c749ba04ad431fd3f91b7f79b376022fe5ad7f04f37089b8ff98a32ef25b7bee">2025-07-18</date>
   <os sha256_leaf="8eb53310a3fc1cae109183472189d869f47eb23a97f077880458ab6923284b4f">Windows 8</os>
   <shell sha256_leaf="30cd51bce11c933269b8cc880ced63ecbd1643d28115c4b144fa451cdf4aa437">MINGW64 (Git Bash)</shell>
-  <tools sha256_leaf="33fa0bddc8e4d71360fd77d509fb33eaac83d8b3e5c805baf89780ffbaef47c3">
+  <tools>
     <python sha256_leaf="28705e0f99e4c07a3a7d443aa465858b67229383b9e0523e898ea836685a6fa4">3.10.11</python>
     <pip sha256_leaf="65f5cd8f1997d807bbca77f3a618a4bce8115da06278b6a499818da977a730d1">25.1.1</pip>
     <lxml sha256_leaf="753116610b96db1761aa52b45b8b331ed03685ea68033e0cc3d4ac1409ed99a5">6.0.0</lxml>
     <git sha256_leaf="e9b15cbd9c3d629ffd35744d8d6c6d10cfa022bb2da077bd367fad902ecde87d">2.50.1.windows.1</git>
     <openssl sha256_leaf="6fdb167e05c943d881bd77189c52d195fb07d2c29f2266ec8075527311cb251b">3.2.4</openssl>
   </tools>
-<sha256>419442f6431fdddd0cdb482657b5e82f4685932eb238ae799e34a6fa89f8d2a9</sha256></environmentContext>
+<sha256>78c83c648f97f778e85dd68580d105c5132758b79e20776660b94a1368f5f7e3</sha256></environmentContext>
