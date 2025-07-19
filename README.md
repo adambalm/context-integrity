@@ -2,6 +2,10 @@
 
 A cryptographic context management system for LLM sessions that prevents context drift through XML canonicalization, SHA-256 signing, and runtime verification.
 
+## Technical Reference Available
+
+**For Anthropic MCP Team**: [Technical Assessment](docs/candidate.md) - Claude's direct evaluation of technical work and experience based on collaboration on this project.
+
 ## Purpose
 
 Eliminate context drift in LLM conversations by providing **one-command context loading** with **real-time integrity enforcement**. When context integrity is violated, sessions halt with a clear violation signal.
