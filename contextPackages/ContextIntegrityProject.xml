@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contextSnapshot>
+  <meta>
+    <name>ContextIntegrityProject</name>
+    <version>1.2</version>
+    <timestamp>2025-07-19T16:30:00-04:00</timestamp>
+    <sha256>pending_generation</sha256>
+  </meta>
+  
+  <projectOverview>
+    <purpose>Enable persistent, transportable AI context across models and sessions</purpose>
+    <status>Active development - Python tools replacing PowerShell implementation</status>
+    <priority>High - foundational to all other projects</priority>
+    <repository>context-integrity (GitHub)</repository>
+  </projectOverview>
+
+  <technicalArchitecture>
+    <coreComponents>
+      <component name="XML Canonicalization">
+        <description>Deterministic data serialization for hashing/signing</description>
+        <status>Implemented</status>
+        <priorArt>W3C Canonical XML 1.0, RFC 8785 JSON Canonicalization</priorArt>
+      </component>
+      <component name="Per-Element Hashing">
+        <description>SHA-256 hashing of individual data fields as Merkle tree leaves</description>
+        <status>Concept validated, implementation pending</status>
+        <priorArt>Merkle's US Patent 4,309,569 (1982)</priorArt>
+      </component>
+      <component name="Redactable Signatures">
+        <description>Selective field removal while maintaining signature validity</description>
+        <status>Research phase</status>
+        <priorArt>HP US8266439B2 (2012), ISO 23264-2:2024</priorArt>
+      </component>
+      <component name="Context Loader">
+        <description>One-command context injection with drift enforcement</description>
+        <status>Python rewrite in progress</status>
+        <originalTools>ctx-new.ps1, ctx-loader.ps1 (deprecated)</originalTools>
+      </component>
+    </coreComponents>
+    
+    <driftEnforcement>
+      <method>Banner checking on every LLM response</method>
+      <failureAction>Session halt with CONTEXT VIOLATION error</failureAction>
+      <implementation>Client-side middleware, not prompt-based</implementation>
+    </driftEnforcement>
+  </technicalArchitecture>
+
+  <patentAnalysis>
+    <recommendation>NO-GO for patent filing</recommendation>
+    <confidence>95%</confidence>
+    <reasoning>
+      <priorArt>
+        <item>XML/JSON canonicalization: W3C/IETF standards</item>
+        <item>Merkle trees: Foundational 1980s work</item>
+        <item>Redactable signatures: Multiple patents, ISO standard</item>
+        <item>LLM workflow integrity: Active 2024-2025 research</item>
+      </priorArt>
+      <blackFlagAssessment>All building blocks well-established, combination obvious to skilled practitioner</blackFlagAssessment>
+    </reasoning>
+  </patentAnalysis>
+
+  <currentGaps>
+    <technical>
+      <gap>Repository state unknown - need file inspection</gap>
+      <gap>Python tools specification undefined</gap>
+      <gap>MCP integration pathway unclear</gap>
+      <gap>Environment integration with Codespaces</gap>
+    </technical>
+    <strategic>
+      <gap>Relationship to Career project undefined</gap>
+      <gap>Integration with Ghost CMS unclear</gap>
+      <gap>Priority vs other project work</gap>
+    </strategic>
+  </currentGaps>
+
+  <mcpIntegration>
+    <status>Potential use case identified</status>
+    <rationale>Context persistence across AI interactions aligns with MCP's protocol goals</rationale>
+    <investigation>Required to determine technical feasibility</investigation>
+    <careerRelevance>Anthropic TPM role for MCP - direct alignment</careerRelevance>
+  </mcpIntegration>
+
+  <nextSteps>
+    <immediate>
+      <step>Complete context file separation and summarization</step>
+      <step>Investigate MCP technical specifications</step>
+      <step>Define Career project scope and integration</step>
+    </immediate>
+    <shortTerm>
+      <step>Python tools specification and implementation</step>
+      <step>Repository state assessment</step>
+      <step>Codespaces environment setup</step>
+    </shortTerm>
+  </nextSteps>
+
+  <dependencies>
+    <internal>
+      <item>Ghost CMS project (publishing platform)</item>
+      <item>Career project (job search strategy)</item>
+      <item>Adam Balm philosophical framework</item>
+    </internal>
+    <external>
+      <item>MCP technical documentation</item>
+      <item>Anthropic job application timeline</item>
+      <item>GitHub Codespaces environment</item>
+    </external>
+  </dependencies>
+</contextSnapshot>
