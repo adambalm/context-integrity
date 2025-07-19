@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contextSnapshot>
+  <meta>
+    <n>CareerProject</n>
+    <version>1.0</version>
+    <timestamp>2025-07-19T17:30:00-04:00</timestamp>
+    <sha256>pending_generation</sha256>
+  </meta>
+  
+  <projectOverview>
+    <purpose>Secure strategic employment that aligns with and advances Adam Balm work</purpose>
+    <status>Active job search with identified primary target</status>
+    <priority>High - enables optimal development of all other projects</priority>
+    <timeline>Strategic positioning with long-term career alignment</timeline>
+  </projectOverview>
+
+  <primaryTarget>
+    <position>Technical Program Manager, Model Context Protocol</position>
+    <company>Anthropic</company>
+    <location>New York City, NY</location>
+    <salaryRange>$290,000 - $365,000 USD</salaryRange>
+    
+    <roleAlignment>
+      <mcpFocus>Direct alignment with context-integrity project goals</mcpFocus>
+      <openSourceEcosystem>Experience building community-driven projects</openSourceEcosystem>
+      <technicalProgramManagement>Orchestrating complex technical initiatives</technicalProgramManagement>
+      <aiSafetyFocus>Responsible AI development aligns with Adam Balm philosophical framework</aiSafetyFocus>
+    </roleAlignment>
+    
+    <responsibilities>
+      <item>Drive MCP development and growth in open-source ecosystem</item>
+      <item>Coordinate between engineering teams, external partners, community contributors</item>
+      <item>Build relationships with key partners and community members</item>
+      <item>Lead meetings and program reviews for MCP workstreams</item>
+      <item>Organize and prioritize external contributions</item>
+      <item>Maintain comprehensive technical documentation</item>
+      <item>Provide detailed status reports on technical risks and dependencies</item>
+    </responsibilities>
+  </primaryTarget>
+
+  <candidateStrengths>
+    <technicalBackground>
+      <contextIntegrity>Demonstrates understanding of protocol design and implementation</contextIntegrity>
+      <ghostCMSProject>Shows rapid deployment and system integration capabilities</ghostCMSProject>
+      <automationPipeline>n8n + OpenAI integration experience</automationPipeline>
+      <versionControl>Git workflow and collaborative development practices</versionControl>
+    </technicalBackground>
+    
+    <programManagement>
+      <blackFlagProtocol>Systematic approach to managing technical complexity and preventing drift</blackFlagProtocol>
+      <scrumMasterPersona>Agile methodology and stakeholder coordination experience</scrumMasterPersona>
+      <multiProjectCoordination>Simultaneous management of interconnected technical initiatives</multiProjectCoordination>
+      <riskAssessment>Red team mode and epistemic risk evaluation capabilities</riskAssessment>
+    </programManagement>
+    
+    <communityEngagement>
+      <openSourceContributions>GitHub repository management and collaborative development</openSourceContributions>
+      <documentationFocus>Emphasis on comprehensive technical documentation</documentationFocus>
+      <stakeholderCommunication>Experience bridging technical and non-technical concerns</stakeholderCommunication>
+    </communityEngagement>
+    
+    <uniquePerspective>
+      <languageTechnologyConvergence>Deep understanding of AI as linguistic interface technology</languageTechnologyConvergence>
+      <philosophicalFramework>Adam Balm perspective on responsible AI development</philosophicalFramework>
+      <pragmaticIdealism>Balancing theoretical insights with practical implementation</pragmaticIdealism>
+    </uniquePerspective>
+  </candidateStrengths>
+
+  <requirementAlignment>
+    <experience>
+      <technicalProgramManagement>Demonstrated through multi-project coordination and protocol development</technicalProgramManagement>
+      <openSourceEcosystems>GitHub-based collaborative development experience</openSourceEcosystems>
+      <apiDevelopment>Integration patterns via n8n, OpenAI, Ghost CMS webhooks</apiDevelopment>
+      <distributedTeams>Remote collaboration and asynchronous communication</distributedTeams>
+    </experience>
+    
+    <skills>
+      <technicalDepth>Can dive into implementation details while maintaining program oversight</technicalDepth>
+      <stakeholderEngagement>Experience with both technical and philosophical communication modes</stakeholderEngagement>
+      <organizationalCapacity>Multi-workstream management via Black Flag and ScrumMaster protocols</organizationalCapacity>
+      <ambiguityTolerance>Thriving in unstructured environments and bringing order to chaos</ambiguityTolerance>
+      <influenceBuilding>Demonstrated ability to coordinate across project boundaries</influenceBuilding>
+    </skills>
+    
+    <alignment>
+      <aiSafety>Adam Balm framework emphasizes responsible AI development and species-level concerns</aiSafety>
+      <collaborativeResearch>Experience with frequent research discussions and alignment processes</collaborativeResearch>
+      <impactFocus>Prioritizing long-term goals over smaller specific puzzles</impactFocus>
+      <communicationSkills>Dual expertise in technical precision and eloquent articulation</communicationSkills>
+    </alignment>
+  </requirementAlignment>
+
+  <mcpIntegrationOpportunity>
+    <contextIntegrityAlignment>
+      <sharedGoals>Both focus on protocol-based context management and integrity</sharedGoals>
+      <technicalSynergy>MCP could provide standardized framework for context-integrity implementation</technicalSynergy>
+      <communityValue>Context-integrity project could contribute to MCP ecosystem</communityValue>
+    </contextIntegrityAlignment>
+    
+    <implementationPotential>
+      <protocolDesign>Experience with XML canonicalization and signature schemes</protocolDesign>
+      <integrationsExperience>Ghost CMS, n8n, OpenAI coordination demonstrates platform ecosystem understanding</integrationsExperience>
+      <qualityStandards>Black Flag Protocol ensures security and quality standards alignment</qualityStandards>
+    </implementationPotential>
+  </mcpIntegrationOpportunity>
+
+  <applicationStrategy>
+    <portfolioDemonstration>
+      <contextIntegrity>Showcases protocol design and technical program management</contextIntegrity>
+      <ghostCMS>Demonstrates rapid deployment and integration capabilities</ghostCMS>
+      <adamBalm>Shows unique perspective on AI development and responsible technology</adamBalm>
+      <blackFlagProtocol>Illustrates systematic approach to managing technical complexity</blackFlagProtocol>
+    </portfolioDemonstration>
+    
+    <narrativeAlignment>
+      <problemStatement>Current AI development lacks persistent context management across interactions</problemStatement>
+      <solutionApproach>Context-integrity project addresses this through protocol-based verification</solutionApproach>
+      <mcpRelevance>MCP provides standardized framework for this type of context management</mcpRelevance>
+      <valueProposition>Bringing both technical implementation and philosophical framework perspective</valueProposition>
+    </narrativeAlignment>
+    
+    <differentiation>
+      <technicalPhilosophicalSynthesis>Rare combination of implementation capability and humanistic concerns</technicalPhilosophicalSynthesis>
+      <protocolExpertise>Demonstrated experience with protocol design and integrity verification</protocolExpertise>
+      <communityEngagement>GitHub-based collaborative development and documentation focus</communityEngagement>
+      <riskManagement>Black Flag and Red Team approaches to identifying and mitigating technical risks</riskManagement>
+    </differentiation>
+  </applicationStrategy>
+
+  <timeline>
+    <immediate>
+      <step>Complete context snapshot artifacts for portfolio demonstration</step>
+      <step>Investigate MCP technical specifications and current ecosystem</step>
+      <step>Prepare application materials highlighting project alignment</step>
+    </immediate>
+    
+    <shortTerm>
+      <step>Submit Anthropic MCP TPM application</step>
+      <step>Develop MCP integration proof-of-concept with context-integrity</step>
+      <step>Continue Ghost CMS and automation pipeline development</step>
+    </shortTerm>
+    
+    <contingency>
+      <alternatives>Identify complementary roles at AI companies with protocol/ecosystem focus</alternatives>
+      <development>Continue project advancement to strengthen portfolio during application process</development>
+      <networking>Build relationships in AI safety and protocol development communities</networking>
+    </contingency>
+  </timeline>
+
+  <riskAssessment>
+    <applicationRisks>
+      <competition>High-profile role likely to attract experienced TPM candidates</competition>
+      <experienceGap>May lack traditional enterprise TPM background</experienceGap>
+      <locationRequirement>25% office time in NYC may require relocation considerations</locationRequirement>
+    </applicationRisks>
+    
+    <mitigation>
+      <portfolioDifferentiation>Unique technical-philosophical synthesis provides distinctive value</portfolioDifferentiation>
+      <protocolExpertise>Direct experience with protocol design and implementation</protocolExpertise>
+      <passionAlignment>Genuine interest in AI safety and responsible development</passionAlignment>
+    </mitigation>
+  </riskAssessment>
+
+  <dependencies>
+    <internal>
+      <item>Completion of context-integrity technical demonstration</item>
+      <item>Ghost CMS portfolio presentation readiness</item>
+      <item>Adam Balm framework articulation for application materials</item>
+    </internal>
+    
+    <external>
+      <item>MCP ecosystem development timeline and community needs</item>
+      <item>Anthropic hiring timeline and process requirements</item>
+      <item>Visa sponsorship availability and process</item>
+    </external>
+  </dependencies>
+
+  <successMetrics>
+    <primary>
+      <metric>Secure Anthropic MCP TPM position</metric>
+      <timeline>Target within 3-6 months</timeline>
+    </primary>
+    
+    <secondary>
+      <metric>Alternative AI company role with protocol/ecosystem focus</metric>
+      <metric>Maintain development momentum on all projects during job search</metric>
+      <metric>Build professional network in AI safety and protocol development communities</metric>
+    </secondary>
+  </successMetrics>
+</contextSnapshot>
