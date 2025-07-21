@@ -15,7 +15,7 @@ Eliminate context drift in LLM conversations by providing **one-command context 
 ### Core Capabilities
 - **Cryptographic Context Signing**: SHA-256 signatures with XML canonicalization
 - **Runtime Drift Detection**: Automatic session halting on context violations  
-- **Git Integration**: Versioned context snapshots with PowerShell tooling
+- **Python CLI Tools**: Simple command-line tools for context management
 - **One-Command Loading**: Simple CLI for context verification and injection
 
 ### Advanced: Redactable Contexts
@@ -30,10 +30,10 @@ Eliminate context drift in LLM conversations by providing **one-command context 
 
 ```bash
 # Create and sign a new context
-pwsh tools/ctx-new.ps1 userContext 2025-07-23
+python tools/ctx_new.py input_context.xml signed_context.xml
 
 # Load and verify context
-python tools/ctx_loader.py contexts/userContext_2025-07-23.xml
+python tools/ctx_loader.py signed_context.xml
 # Output: 🟢 CONTEXT LOADED
 
 # On integrity violation: 🔴 CONTEXT VIOLATION
@@ -113,7 +113,6 @@ context-integrity/
 
 - **Python**: 3.10+
 - **Dependencies**: `lxml` for XML processing
-- **Optional**: PowerShell 7+ for enhanced tooling
 
 ## Contributing
 

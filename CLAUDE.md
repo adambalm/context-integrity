@@ -42,11 +42,8 @@ docs/               # Project documentation (PRD.xml, userStories.xml)
 
 #### Creating Signed Contexts
 ```bash
-# Python approach
+# Create and sign contexts
 python tools/ctx_new.py <input.xml> <output.xml>
-
-# PowerShell approach (with git integration)
-pwsh tools/ctx-new.ps1 <context_type> <date>
 ```
 
 #### Loading/Verifying Contexts  
@@ -79,7 +76,7 @@ python tools/redact.py <signed_context.xml> <redacted_output.xml> <field1> <fiel
 - Uses lxml with C14N (Canonical XML) for deterministic serialization
 - SHA-256 signatures exclude the `<sha256>` element itself to prevent circular dependencies
 - Context verification is designed to halt LLM sessions on integrity violations (🔴 CONTEXT VIOLATION)
-- PowerShell scripts integrate with git for versioned context snapshots
+- Python tools provide clean, focused implementation of core signing/verification logic
 
 ### Redactable System (Merkle-tree Approach)
 - Individual `sha256_leaf` attributes on leaf elements enable selective verification
@@ -175,7 +172,3 @@ The system implements a defensive security pattern:
 - **ScrumMaster / scrum** – ScrumMaster persona  
 - **Red Team** – adversarial mode  
 - **baseline / synch project** – Baseline Recovery Protocol  
-
-## Current Session Parameters
-- n-counter threshold: 5
-- Protocol version: v1.3
