@@ -1,5 +1,12 @@
 pip-freeze.txt
 tools/contextIntegrity1.txt
 *.canon
-*.canon
 __pycache__/
+
+# Test files
+test_*.xml
+temp_*.xml
+
+# Generic knowledge snapshots (keep specific historical ones)
+knowledge_snapshot_*.xml
+!knowledge_snapshot_2025-07-20_claude-sonnet.xml
