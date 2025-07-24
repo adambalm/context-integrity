@@ -81,8 +81,7 @@ context-integrity/
 
 ## 📂 Directory Roles
 
-- **contexts/** — Example environment and source context files. Several variants
-  show signed, redacted, and redactable XML used by the CLI tools.
+- **contexts/** —  signed, redacted, and redactable XML used by the CLI tools.
 - **contextPackages/** — XML "contextSnapshot" packages with metadata and
   project overviews, including `contextIntegrityProject.xml`.
 - **tools/** — Python scripts implementing signing, verification, redaction and
