@@ -79,6 +79,23 @@ context-integrity/
 └── docs/               # Project documentation
 ```
 
+## 📂 Directory Roles
+
+- **contexts/** — Example environment and source context files. Several variants
+  show signed, redacted, and redactable XML used by the CLI tools.
+- **contextPackages/** — XML "contextSnapshot" packages with metadata and
+  project overviews, including `contextIntegrityProject.xml`.
+- **tools/** — Python scripts implementing signing, verification, redaction and
+  canonicalization. Each file exposes a CLI interface (e.g. `ctx_new.py`).
+- **docs/** — Background material like the PRD, user stories and the technical
+  candidate assessment.
+- **CLAUDE.md** — Internal guidance for Claude and a complete copy of the
+  Black Flag protocol.
+- **knowledge_snapshot_2025-07-20_claude-sonnet.xml** — XML record validating
+  tool behavior and documenting strategic decisions.
+- **prior_art_research_2025-07-20.md** — Summary of related security products
+  researched for this project.
+
 ## Security Features
 
 ### Cryptographic Integrity
