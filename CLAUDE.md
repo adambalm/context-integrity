@@ -99,6 +99,8 @@ The system implements a defensive security pattern:
 - **Runtime verification**: Enforces context compliance in LLM interactions
 - **Future-ready**: Architecture designed for salting and HIPAA compliance
 
+--BEGIN BLACK FLAG--
+
 # Black Flag Protocol v1.3
 
 ## Section 1 · Black Flag Core Catalogue (14 Clauses)
@@ -171,4 +173,7 @@ The system implements a defensive security pattern:
 - **Black Flag** – full protocol  
 - **ScrumMaster / scrum** – ScrumMaster persona  
 - **Red Team** – adversarial mode  
-- **baseline / synch project** – Baseline Recovery Protocol  
+- **baseline / synch project** – Baseline Recovery Protocol
+
+- --END BLACK FLAG--
+
