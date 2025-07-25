@@ -82,8 +82,5 @@ context-integrity/
 
 Maintain the cryptographic integrity model and prioritize security-first patterns.
 
-## License
 
-Licensed under GPL v3.0 ([LICENSE](LICENSE)).
-
-*"In the ruins of great ambitions, we often find our most useful tools."*
+*"La tierra es redonda como una naranja.* -- José Arcadio Buendía
