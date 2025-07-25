@@ -1,96 +1,86 @@
 # Context-Integrity: An XML Signer in the Ruins
 
-## What This Is
-A functional XML signing and verification toolkit with Merkle tree support for redactable signatures. The tools work exactly as designed for cryptographic document integrity.
+*A learning artifact reflecting both the original ambitions and the post-mortem insights of the Context-Integrity project.*
 
-## What This Was Supposed To Be  
-A system for preventing context drift in human-LLM conversations through runtime verification and session-level enforcement.
+## Overview
+
+A cryptographic context-management toolkit for LLM sessions, offering XML canonicalization, SHA-256 signing, Merkle-tree redactable signatures, and runtime verification. While fully functional for document integrity, its session-level enforcement proved architecturally impossible in stateless LLM environments.
+
+## What This Is
+
+* A functional XML signing and verification toolkit.
+* Merkle tree support for redactable signatures.
+* Designed for cryptographic document integrity in CLI workflows.
+
+## What This Was Supposed To Be
+
+Prevent context drift in human-LLM conversations via:
+
+* Session-layer hooks for context injection.
+* Real-time runtime verification within the LLM session.
+* Cross-session state persistence.
 
 ## Why It Failed
 
-**The fundamental problem**: We tried to build persistent context management in a stateless architecture.
+LLM providers operate as stateless inference engines without persistent session memory or injection APIs—making in-chat enforcement infeasible and economically disincentivized.
 
-**What we assumed existed:**
-- Session-layer hooks for context injection
-- Runtime verification capabilities
-- Cross-session state persistence
+## Technical Reference
 
-**What actually exists:**
-- Stateless request/response cycles
-- No session management APIs
-- Economic incentives against context persistence (retained context = lost revenue)
+* **Anthropic MCP Assessment**: [docs/candidate.md](docs/candidate.md)
 
-## The Learning
-LLM providers offer stateless inference, not persistent memory. Building context integrity tools taught us why the architecture makes session-level enforcement impossible.
+## Learning Takeaways
 
-## What You'll Find Here
-- `tools/ctx_new.py` - Signs XML documents with SHA-256
-- `tools/ctx_loader.py` - Verifies signatures 
-- `tools/ctx_redactable_signer.py` - Merkle tree signatures
-- `tools/ctx_redactable_loader.py` - Verifies with redaction support
-- `docs/POSTMORTEM_2025-07-25.md` - Why runtime context enforcement is impossible
-- `docs/ACTUAL_USES.md` - Real applications for signed conversations
+* **Stateless Limitation**: True enforcement requires stateful agents or external orchestrators.
+* **Protocol vs. Architecture**: Protocols define intent; LLM runtime must support enforcement.
+* **Drift Detection**: Requires external counters and signed snapshots.
 
-## Quick Start
+## Available Components
 
-### Basic XML Signing
+### CLI Tools
 
-```bash
-# Create and sign a new context
-python tools/ctx_new.py input_context.xml signed_context.xml
+* `tools/ctx_new.py`: Signs XML documents with SHA-256.
+* `tools/ctx_loader.py`: Verifies signatures.
+* `tools/ctx_redactable_signer.py`: Merkle-tree signer.
+* `tools/ctx_redactable_loader.py`: Redactable verifier.
+* `tools/redact.py`: Selective redaction while preserving proofs.
+* `tools/canonicalizer.py`: XML canonicalization.
 
-# Verify signature
-python tools/ctx_loader.py signed_context.xml
-# Output: 🟢 CONTEXT LOADED
-```
+### Documentation
 
-### Redactable Context Operations
+* `docs/POSTMORTEM_2025-07-25.md`: Post-mortem analysis of context enforcement.
+* `docs/ACTUAL_USES.md`: Real-world use cases for signed contexts.
+* `protocol/black-flag/README.md`: Black Flag Protocol v1.3 for operational rules.
 
-```bash
-# Sign with individual leaf hashes
-python tools/ctx_redactable_signer.py input.xml signed_output.xml
+## File Structure
 
-# Verify redactable context
-python tools/ctx_redactable_loader.py signed_output.xml
-
-# Redact sensitive fields while preserving integrity
-python tools/redact.py signed_output.xml redacted.xml date os
-```
-
-## Technical Architecture
-
-### What Actually Works
-- **XML Signing**: SHA-256 with C14N canonicalization  
-- **Merkle Trees**: Individual `sha256_leaf` attributes for selective redaction
-- **Verification**: Cryptographic integrity checking for document tampering
-- **Redaction**: Remove sensitive data while preserving cryptographic proof
-
-### File Structure
 ```
 context-integrity/
-├── tools/              # Functional XML signing toolkit
-│   ├── ctx_new.py              # Document signer
-│   ├── ctx_loader.py           # Signature verifier  
-│   ├── ctx_redactable_signer.py # Merkle tree signer
-│   ├── ctx_redactable_loader.py # Redactable verifier
-│   └── redact.py               # Content redaction
-├── contexts/           # Example signed documents
-├── docs/               # PRD showing original ambitions + postmortem
-└── CLAUDE.md           # Black Flag Protocol (the real success)
+├── contexts/           # Example signed XML snapshots
+├── contextPackages/    # ContextSnapshot packages with metadata
+├── tools/              # Core CLI implementation scripts
+├── docs/               # Project docs, PRDs, post-mortems, assessments
+└── protocol/           # Signed operational protocols (e.g., Black Flag)
+```
 
 ## Status
-✅ XML signing - Complete and functional  
-❌ LLM context enforcement - Architecturally impossible  
-🔄 Pivoting to context portability workflows
 
-## Evidence of Architectural Reality
-- **Commit c95b744**: PowerShell integration layer removed with no replacement
-- **PRD.xml vs Implementation**: Documents promise "banner-check middleware" and "system prompt injection" - zero session management code exists
-- **Economic Constraint**: Persistent context = lost revenue for LLM providers
+* ✅ XML signing and verification: complete and functional.
+* ❌ LLM session enforcement: architecturally impossible.
+* 🔄 Pivoting to context portability and audit workflows.
+
+## Roadmap
+
+* **Planned**: Salt integration, HIPAA compliance, MCP compatibility.
+* **Future**: GUI plugins, CI/CD actions, multi-agent integration.
 
 ## Requirements
-- **Python**: 3.10+
-- **Dependencies**: `lxml` for XML processing
 
----
-*"In the ruins of great ambitions, we often find our most useful tools."*
+* **Python**: 3.10+
+* **Dependencies**: `lxml`
+
+## Contributing
+
+Maintain the cryptographic integrity model and prioritize security-first patterns.
+
+
+*"La tierra es redonda como una naranja.* -- José Arcadio Buendía
