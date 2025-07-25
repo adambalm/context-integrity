@@ -1,42 +1,47 @@
-# Context-Integrity
+# Context-Integrity: An XML Signer in the Ruins
 
-A cryptographic context management system for LLM sessions that prevents context drift through XML canonicalization, SHA-256 signing, and runtime verification.
+## What This Is
+A functional XML signing and verification toolkit with Merkle tree support for redactable signatures. The tools work exactly as designed for cryptographic document integrity.
 
-## Technical Reference Available
+## What This Was Supposed To Be  
+A system for preventing context drift in human-LLM conversations through runtime verification and session-level enforcement.
 
-**For Anthropic MCP Team**: [Technical Assessment](docs/candidate.md) - Claude's direct evaluation of technical work and experience based on collaboration on this project.
+## Why It Failed
 
-## Purpose
+**The fundamental problem**: We tried to build persistent context management in a stateless architecture.
 
-Eliminate context drift in LLM conversations by providing **one-command context loading** with **real-time integrity enforcement**. When context integrity is violated, sessions halt with a clear violation signal.
+**What we assumed existed:**
+- Session-layer hooks for context injection
+- Runtime verification capabilities
+- Cross-session state persistence
 
-## Features
+**What actually exists:**
+- Stateless request/response cycles
+- No session management APIs
+- Economic incentives against context persistence (retained context = lost revenue)
 
-### Core Capabilities
-- **Cryptographic Context Signing**: SHA-256 signatures with XML canonicalization
-- **Runtime Drift Detection**: Automatic session halting on context violations  
-- **Python CLI Tools**: Simple command-line tools for context management
-- **One-Command Loading**: Simple CLI for context verification and injection
+## The Learning
+LLM providers offer stateless inference, not persistent memory. Building context integrity tools taught us why the architecture makes session-level enforcement impossible.
 
-### Advanced: Redactable Contexts
-- **Merkle-Tree Architecture**: Individual leaf element signing for selective verification
-- **Selective Redaction**: Remove sensitive data while preserving cryptographic proof
-- **HIPAA-Ready Design**: Architecture prepared for compliance requirements
-- **Granular Integrity**: Each XML element can be independently validated
+## What You'll Find Here
+- `tools/ctx_new.py` - Signs XML documents with SHA-256
+- `tools/ctx_loader.py` - Verifies signatures 
+- `tools/ctx_redactable_signer.py` - Merkle tree signatures
+- `tools/ctx_redactable_loader.py` - Verifies with redaction support
+- `docs/POSTMORTEM_2025-07-25.md` - Why runtime context enforcement is impossible
+- `docs/ACTUAL_USES.md` - Real applications for signed conversations
 
 ## Quick Start
 
-### Basic Context Operations
+### Basic XML Signing
 
 ```bash
 # Create and sign a new context
 python tools/ctx_new.py input_context.xml signed_context.xml
 
-# Load and verify context
+# Verify signature
 python tools/ctx_loader.py signed_context.xml
 # Output: 🟢 CONTEXT LOADED
-
-# On integrity violation: 🔴 CONTEXT VIOLATION
 ```
 
 ### Redactable Context Operations
@@ -52,92 +57,40 @@ python tools/ctx_redactable_loader.py signed_output.xml
 python tools/redact.py signed_output.xml redacted.xml date os
 ```
 
-## Architecture
+## Technical Architecture
 
-### Generation 2 Security Model
-
-The system implements a **second-generation** hashing approach with:
-
-- **Core Signing**: Whole-document SHA-256 with C14N canonicalization
-- **Merkle-Tree Redaction**: Individual `sha256_leaf` attributes on XML leaf elements
-- **Selective Verification**: Independent validation of redacted content
-- **Future-Ready**: Designed for salt integration and HIPAA compliance
+### What Actually Works
+- **XML Signing**: SHA-256 with C14N canonicalization  
+- **Merkle Trees**: Individual `sha256_leaf` attributes for selective redaction
+- **Verification**: Cryptographic integrity checking for document tampering
+- **Redaction**: Remove sensitive data while preserving cryptographic proof
 
 ### File Structure
-
 ```
 context-integrity/
-├── contexts/           # Signed XML context files
-├── contextPackages/    # Context package definitions
-├── tools/              # Core implementation scripts
-│   ├── ctx_new.py              # Basic context signer
-│   ├── ctx_loader.py           # Basic context verifier
-│   ├── ctx_redactable_signer.py # Merkle-tree signer
+├── tools/              # Functional XML signing toolkit
+│   ├── ctx_new.py              # Document signer
+│   ├── ctx_loader.py           # Signature verifier  
+│   ├── ctx_redactable_signer.py # Merkle tree signer
 │   ├── ctx_redactable_loader.py # Redactable verifier
-│   ├── redact.py               # Content redaction tool
-│   └── canonicalizer.py        # XML canonicalization
-└── docs/               # Project documentation
-```
+│   └── redact.py               # Content redaction
+├── contexts/           # Example signed documents
+├── docs/               # PRD showing original ambitions + postmortem
+└── CLAUDE.md           # Black Flag Protocol (the real success)
 
-## 📂 Directory Roles
+## Status
+✅ XML signing - Complete and functional  
+❌ LLM context enforcement - Architecturally impossible  
+🔄 Pivoting to context portability workflows
 
-- **contexts/** —  signed, redacted, and redactable XML used by the CLI tools.
-- **contextPackages/** — XML "contextSnapshot" packages with metadata and
-  project overviews, including `contextIntegrityProject.xml`.
-- **tools/** — Python scripts implementing signing, verification, redaction and
-  canonicalization. Each file exposes a CLI interface (e.g. `ctx_new.py`).
-- **docs/** — Background material like the PRD, user stories and the technical
-  candidate assessment.
-- **CLAUDE.md** — Internal guidance for Claude and a complete copy of the
-  Black Flag protocol.
-- **knowledge_snapshot_2025-07-20_claude-sonnet.xml** — XML record validating
-  tool behavior and documenting strategic decisions.
-- **prior_art_research_2025-07-20.md** — Summary of related security products
-  researched for this project.
-
-## Security Features
-
-### Cryptographic Integrity
-- **Deterministic Canonicalization**: C14N ensures consistent hashing across platforms
-- **Tamper Detection**: Any modification breaks cryptographic signatures
-- **Self-Verification**: Signatures exclude themselves to prevent circular dependencies
-
-### Privacy & Compliance
-- **Selective Redaction**: Remove sensitive data while proving original content
-- **Merkle-Tree Verification**: Validate individual elements without full context
-- **HIPAA Preparation**: Architecture designed for healthcare compliance requirements
-
-## Roadmap
-
-### Current (Generation 2)
-- ✅ Merkle-tree-like redactable contexts
-- ✅ Individual leaf element signing
-- ✅ Selective content redaction
-
-### Planned
-- 🔄 **Salt Integration**: Enhanced security with randomized salting
-- 🔄 **HIPAA Compliance**: Full healthcare data protection capabilities
-- 🔄 **MCP Integration**: Model Context Protocol compatibility
-
-### Future Considerations
-- GUI/IDE plugins for context management
-- CI/CD integration and GitHub Actions
-- Multi-agent system compatibility
-- External watchdog processes
+## Evidence of Architectural Reality
+- **Commit c95b744**: PowerShell integration layer removed with no replacement
+- **PRD.xml vs Implementation**: Documents promise "banner-check middleware" and "system prompt injection" - zero session management code exists
+- **Economic Constraint**: Persistent context = lost revenue for LLM providers
 
 ## Requirements
-
 - **Python**: 3.10+
 - **Dependencies**: `lxml` for XML processing
 
-## Contributing
-
-This project implements defensive security patterns for LLM context management. Contributions should maintain the cryptographic integrity model and security-first approach.
-
-## License
-
-Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
-
 ---
-
-**Context-Integrity**: Preventing LLM context drift through cryptographic verification.
+*"In the ruins of great ambitions, we often find our most useful tools."*
