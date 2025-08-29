@@ -1,0 +1,23 @@
+=== Development Toolchains ===
+/bin/bash: line 1: {: command not found
+head: cannot open 'echo' for reading: No such file or directory
+head: cannot open 'Dev tools basic collected' for reading: No such file or directory
+head: cannot open '}' for reading: No such file or directory
+git version 2.43.0
+Python 3.12.3
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+v22.18.0
+10.9.3
+-- Additional Tools --
+pyenv: not found
+conda: not found
+poetry: not found
+pipx: not found
+1.22.22
+10.14.0
+-- Compilers --
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+clang: not found
+cmake: not found
+make: not found

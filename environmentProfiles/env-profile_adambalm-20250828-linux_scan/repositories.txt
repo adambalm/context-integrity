@@ -1,0 +1,8 @@
+=== Git Repositories ===
+
+-- Git repositories in home directory (max depth 2) --
+/home/ed/meta-ops-validator
+/home/ed/ml-roadmap
+/home/ed/.nvm
+/home/ed/ghost-writer
+/home/ed/context-integrity

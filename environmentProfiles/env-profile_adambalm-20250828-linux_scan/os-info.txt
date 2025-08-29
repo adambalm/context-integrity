@@ -1,0 +1,89 @@
+=== OS Information ===
+
+-- uname -a --
+Linux adambalm 6.8.0-78-generic #78-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 11:34:18 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+-- /etc/os-release --
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+-- uptime --
+ 22:32:39 up 2 days,  6:11,  2 users,  load average: 0.40, 0.12, 0.04
+
+-- CPU Info --
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        39 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               12
+On-line CPU(s) list:                  0-11
+Vendor ID:                            GenuineIntel
+Model name:                           11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz
+CPU family:                           6
+Model:                                167
+Thread(s) per core:                   2
+Core(s) per socket:                   6
+Socket(s):                            1
+Stepping:                             1
+CPU(s) scaling MHz:                   47%
+CPU max MHz:                          4400.0000
+CPU min MHz:                          800.0000
+BogoMIPS:                             5184.00
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+L1d cache:                            288 KiB (6 instances)
+L1i cache:                            192 KiB (6 instances)
+L2 cache:                             3 MiB (6 instances)
+L3 cache:                             12 MiB (1 instance)
+NUMA node(s):                         1
+NUMA node0 CPU(s):                    0-11
+Vulnerability Gather data sampling:   Mitigation; Microcode
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:   Not affected
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+
+-- Memory Info --
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       2.3Gi        57Gi       2.1Mi       3.0Gi        60Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+-- Disk Usage --
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              6.3G  1.8M  6.3G   1% /run
+efivarfs                           192K   73K  115K  39% /sys/firmware/efi/efivars
+/dev/mapper/ubuntu--vg-ubuntu--lv  1.8T  118G  1.6T   7% /
+tmpfs                               32G     0   32G   0% /dev/shm
+tmpfs                              5.0M   12K  5.0M   1% /run/lock
+/dev/nvme0n1p2                     2.0G  193M  1.6G  11% /boot
+/dev/nvme0n1p1                     1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                              6.3G   20K  6.3G   1% /run/user/1001
+
+-- Block Devices --
+NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1                   259:0    0 931.5G  0 disk 
+├─nvme0n1p1               259:2    0     1G  0 part /boot/efi
+├─nvme0n1p2               259:3    0     2G  0 part /boot
+└─nvme0n1p3               259:4    0 928.5G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0   1.8T  0 lvm  /
+nvme1n1                   259:1    0 931.5G  0 disk 
+└─ubuntu--vg-ubuntu--lv   252:0    0   1.8T  0 lvm  /

@@ -1,0 +1,24 @@
+=== ENVIRONMENT PROFILE SUMMARY ===
+Generated: Thu Aug 28 10:41:38 PM EDT 2025
+Hostname: adambalm
+Date: 2025-08-28
+
+=== Files Generated ===
+ai-tools.txt
+dev-tools.txt
+docker-info.txt
+editors-tools.txt
+network-info.txt
+os-info.txt
+packages.txt
+repositories.txt
+security-schedule.txt
+services-info.txt
+specific-services.txt
+
+=== Scan Type ===
+Full Linux environment scan (read-only)
+No sudo commands executed
+No secrets collected
+
+All data collected successfully

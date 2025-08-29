@@ -1,0 +1,48 @@
+=== AI Tools and Models ===
+
+-- Ollama --
+Error: unknown command "version" for "ollama"
+ollama: not found
+
+-- Ollama Models --
+NAME                    ID              SIZE      MODIFIED    
+qwen2.5vl:7b            5ced39dfa4ba    6.0 GB    11 days ago    
+llama3.2:latest         a80c4f17acd5    2.0 GB    2 weeks ago    
+qwen2.5-coder:latest    dae161e27b0e    4.7 GB    3 weeks ago    
+deepseek-r1:latest      6995872bfe4c    5.2 GB    3 weeks ago    
+llama3:latest           365c0bd3c000    4.7 GB    3 weeks ago    
+qwq:latest              009cb3f08d74    19 GB     3 weeks ago    
+qwen:latest             d53d04290064    2.3 GB    3 weeks ago    
+gemma3:latest           a2af6cc3eb7f    3.3 GB    3 weeks ago    
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+-- AI-related processes --
+ollama      1240  0.0  0.0 14921976 60196 ?      Ssl  Aug26   0:10 /usr/local/bin/ollama serve
+
+-- Python AI Libraries --
+numpy                   1.26.4
+pandas                  2.1.4+dfsg
+scikit-learn            1.4.1.post1

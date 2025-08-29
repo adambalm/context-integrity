@@ -1,0 +1,45 @@
+=== Security and Scheduled Tasks ===
+
+-- System Timers --
+NEXT                                 LEFT LAST                           PASSED UNIT                                             ACTIVATES
+Thu 2025-08-28 22:46:09 EDT          5min Thu 2025-08-28 22:31:09 EDT  9min ago prometheus-node-exporter-apt.timer               prometheus-node-exporter-apt.service
+Thu 2025-08-28 22:46:09 EDT          5min Thu 2025-08-28 22:31:09 EDT  9min ago prometheus-node-exporter-nvme.timer              prometheus-node-exporter-nvme.service
+Thu 2025-08-28 22:50:00 EDT          9min Thu 2025-08-28 22:40:04 EDT    7s ago sysstat-collect.timer                            sysstat-collect.service
+Thu 2025-08-28 23:29:44 EDT         49min Thu 2025-08-28 22:00:29 EDT 39min ago fwupd-refresh.timer                              fwupd-refresh.service
+Fri 2025-08-29 00:00:00 EDT      1h 19min Thu 2025-08-28 00:00:09 EDT   22h ago dpkg-db-backup.timer                             dpkg-db-backup.service
+Fri 2025-08-29 00:00:00 EDT      1h 19min Thu 2025-08-28 00:00:09 EDT   22h ago logrotate.timer                                  logrotate.service
+Fri 2025-08-29 00:07:00 EDT      1h 26min Thu 2025-08-28 00:07:09 EDT   22h ago sysstat-summary.timer                            sysstat-summary.service
+Fri 2025-08-29 00:52:46 EDT      2h 12min Thu 2025-08-28 15:28:29 EDT    7h ago motd-news.timer                                  motd-news.service
+Fri 2025-08-29 01:52:00 EDT      3h 11min Thu 2025-08-28 10:44:29 EDT   11h ago man-db.timer                                     man-db.service
+Fri 2025-08-29 05:39:50 EDT            6h Thu 2025-08-28 13:12:09 EDT    9h ago apt-daily.timer                                  apt-daily.service
+Fri 2025-08-29 06:51:50 EDT            8h Thu 2025-08-28 06:56:09 EDT   15h ago apt-daily-upgrade.timer                          apt-daily-upgrade.service
+Fri 2025-08-29 16:26:09 EDT           17h Thu 2025-08-28 16:26:09 EDT    6h ago update-notifier-download.timer                   update-notifier-download.service
+Fri 2025-08-29 16:36:39 EDT           17h Thu 2025-08-28 16:36:39 EDT    6h ago systemd-tmpfiles-clean.timer                     systemd-tmpfiles-clean.service
+Sun 2025-08-31 03:10:56 EDT        2 days Sun 2025-08-24 03:10:47 EDT         - e2scrub_all.timer                                e2scrub_all.service
+Mon 2025-09-01 00:45:48 EDT        3 days Mon 2025-08-25 01:11:17 EDT         - fstrim.timer                                     fstrim.service
+Fri 2025-09-05 07:23:50 EDT 1 week 0 days Thu 2025-08-28 14:16:02 EDT    8h ago update-notifier-motd.timer                       update-notifier-motd.service
+-                                       - -                                   - apport-autoreport.timer                          apport-autoreport.service
+-                                       - -                                   - prometheus-node-exporter-ipmitool-sensor.timer   prometheus-node-exporter-ipmitool-sensor.service
+-                                       - -                                   - prometheus-node-exporter-mellanox-hca-temp.timer prometheus-node-exporter-mellanox-hca-temp.service
+-                                       - -                                   - prometheus-node-exporter-smartmon.timer          prometheus-node-exporter-smartmon.service
+-                                       - -                                   - snapd.snap-repair.timer                          snapd.snap-repair.service
+-                                       - -                                   - ua-timer.timer                                   ua-timer.service
+
+22 timers listed.
+
+-- User Crontab --
+no crontab for ed
+No user crontab
+
+-- SSH Directory --
+total 40
+drwxr-x---+  2 ed ed 4096 Aug 13 04:33 .
+drwxr-x---+ 19 ed ed 4096 Aug 28 22:31 ..
+-rw-r-----+  1 ed ed  103 Aug 13 04:33 authorized_keys
+-rw-r-----+  1 ed ed  103 Aug  5 02:13 config
+-rw-------+  1 ed ed  411 Aug  4 19:08 id_ed25519
+-rw-r--r--+  1 ed ed  103 Aug  4 19:08 id_ed25519.pub
+-rw-r-----+  1 ed ed 1811 Aug 13 04:22 id_rsa
+-rw-r--r--+  1 ed ed  393 Aug 13 04:22 id_rsa.pub
+-rw-r-----+  1 ed ed  978 Aug  4 19:11 known_hosts
+-rw-r--r--+  1 ed ed  142 Aug  4 18:59 known_hosts.old

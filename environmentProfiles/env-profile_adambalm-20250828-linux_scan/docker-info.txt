@@ -1,0 +1,109 @@
+=== Docker Information ===
+
+-- Docker Version --
+Client: Docker Engine - Community
+ Version:           28.3.3
+ API version:       1.51
+ Go version:        go1.24.5
+ Git commit:        980b856
+ Built:             Fri Jul 25 11:34:09 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          28.3.3
+  API version:      1.51 (minimum version 1.24)
+  Go version:       go1.24.5
+  Git commit:       bea959c
+  Built:            Fri Jul 25 11:34:09 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.27
+  GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+ runc:
+  Version:          1.2.5
+  GitCommit:        v1.2.5-0-g59923ef
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+-- Docker Info --
+Client: Docker Engine - Community
+ Version:    28.3.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.26.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.39.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 2
+  Running: 2
+  Paused: 0
+  Stopped: 0
+ Images: 4
+ Server Version: 28.3.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-78-generic
+ Operating System: Ubuntu 24.04.3 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 62.57GiB
+ Name: adambalm
+ ID: d1a59bc7-824f-4a66-ad85-d9c6a53e83b1
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+
+-- Docker Containers --
+CONTAINER ID   IMAGE                                COMMAND           CREATED       STATUS                PORTS                                                                                                NAMES
+3006b6c553d2   ghcr.io/open-webui/open-webui:main   "bash start.sh"   3 weeks ago   Up 2 days (healthy)   0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp                                                          open-webui
+626f10afe9e3   portainer/portainer-ce:lts           "/portainer"      3 weeks ago   Up 2 days             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
+
+-- Docker Images --
+REPOSITORY                      TAG       IMAGE ID       CREATED        SIZE
+ghcr.io/open-webui/open-webui   cuda      2017746e4b67   4 weeks ago    10.7GB
+ghcr.io/open-webui/open-webui   main      ca42d907c22d   4 weeks ago    4.78GB
+portainer/portainer-ce          lts       71de3839351a   8 weeks ago    268MB
+hello-world                     latest    74cc54e27dc4   7 months ago   10.1kB
+
+-- Docker Compose Files in Home --

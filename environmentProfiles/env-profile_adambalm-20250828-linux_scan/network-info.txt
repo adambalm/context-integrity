@@ -1,0 +1,197 @@
+=== Networking Information ===
+
+-- IP Addresses --
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eno1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 04:42:1a:96:ce:54 brd ff:ff:ff:ff:ff:ff
+    altname enp0s31f6
+    inet 10.1.11.18/24 metric 100 brd 10.1.11.255 scope global dynamic eno1
+       valid_lft 6446sec preferred_lft 6446sec
+    inet6 2601:19b:4100:1952::1a4d/128 scope global dynamic noprefixroute 
+       valid_lft 7125sec preferred_lft 4425sec
+    inet6 2601:19b:4100:1952:642:1aff:fe96:ce54/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 85857sec preferred_lft 13857sec
+    inet6 fe80::642:1aff:fe96:ce54/64 scope link 
+       valid_lft forever preferred_lft forever
+3: tailscale0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet 100.111.114.84/32 scope global tailscale0
+       valid_lft forever preferred_lft forever
+    inet6 fd7a:115c:a1e0::a301:7256/128 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::93a:9590:848:bd8a/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 5e:da:84:b5:d9:42 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5cda:84ff:feb5:d942/64 scope link 
+       valid_lft forever preferred_lft forever
+5: veth97ade73@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 4e:8d:b2:28:2a:48 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::4c8d:b2ff:fe28:2a48/64 scope link 
+       valid_lft forever preferred_lft forever
+6: veth30ca480@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 72:6f:1e:a1:cb:8d brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::706f:1eff:fea1:cb8d/64 scope link 
+       valid_lft forever preferred_lft forever
+
+-- Routing Table --
+default via 10.1.11.1 dev eno1 proto dhcp src 10.1.11.18 metric 100 
+10.1.11.0/24 dev eno1 proto kernel scope link src 10.1.11.18 metric 100 
+10.1.11.1 dev eno1 proto dhcp scope link src 10.1.11.18 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+
+-- DNS Configuration --
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs should typically not access this file directly, but only
+# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+# different way, replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+search tail069d40.ts.net goepp.net
+
+-- Listening Ports --
+State  Recv-Q Send-Q               Local Address:Port  Peer Address:PortProcess
+LISTEN 0      4096                 127.0.0.53%lo:53         0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:3000       0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:111        0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:22         0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:8000       0.0.0.0:*          
+LISTEN 0      4096                100.111.114.84:56214      0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:9443       0.0.0.0:*          
+LISTEN 0      4096                    127.0.0.54:53         0.0.0.0:*          
+LISTEN 0      4096                     127.0.0.1:2019       0.0.0.0:*          
+LISTEN 0      4096                          [::]:3000          [::]:*          
+LISTEN 0      4096                             *:80               *:*          
+LISTEN 0      4096                          [::]:111           [::]:*          
+LISTEN 0      4096                          [::]:22            [::]:*          
+LISTEN 0      4096                             *:443              *:*          
+LISTEN 0      4096                          [::]:8000          [::]:*          
+LISTEN 0      4096                             *:11434            *:*          
+LISTEN 0      4096                          [::]:9443          [::]:*          
+LISTEN 0      4096                             *:9100             *:*          
+LISTEN 0      4096   [fd7a:115c:a1e0::a301:7256]:56464         [::]:*          
+
+-- All Network Connections (first 100 lines) --
+Netid State     Recv-Q Send-Q                   Local Address:Port                               Peer Address:Port Process                             
+udp   UNCONN    0      0                           127.0.0.54:53                                      0.0.0.0:*                                        
+udp   UNCONN    0      0                        127.0.0.53%lo:53                                      0.0.0.0:*                                        
+udp   UNCONN    0      0                      10.1.11.18%eno1:68                                      0.0.0.0:*                                        
+udp   UNCONN    0      0                              0.0.0.0:111                                     0.0.0.0:*                                        
+udp   UNCONN    0      0                              0.0.0.0:41641                                   0.0.0.0:*                                        
+udp   UNCONN    0      0                              0.0.0.0:52236                                   0.0.0.0:*                                        
+udp   UNCONN    0      0                                 [::]:111                                        [::]:*                                        
+udp   UNCONN    0      0                                    *:443                                           *:*                                        
+udp   UNCONN    0      0      [fe80::642:1aff:fe96:ce54]%eno1:546                                        [::]:*                                        
+udp   UNCONN    0      0                                 [::]:41641                                      [::]:*                                        
+tcp   LISTEN    0      4096                     127.0.0.53%lo:53                                      0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:3000                                    0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:111                                     0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:22                                      0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:8000                                    0.0.0.0:*                                        
+tcp   LISTEN    0      4096                    100.111.114.84:56214                                   0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:9443                                    0.0.0.0:*                                        
+tcp   LISTEN    0      4096                        127.0.0.54:53                                      0.0.0.0:*                                        
+tcp   LISTEN    0      4096                         127.0.0.1:2019                                    0.0.0.0:*                                        
+tcp   TIME-WAIT 0      0                           10.1.11.18:42032                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41950                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:41892                              34.36.57.103:443   users:(("claude",pid=156922,fd=24))
+tcp   ESTAB     0      725                         10.1.11.18:45834                              34.36.57.103:443   users:(("claude",pid=156922,fd=31))
+tcp   TIME-WAIT 0      0                           10.1.11.18:60956                              34.36.57.103:443                                      
+tcp   ESTAB     0      725                         10.1.11.18:45830                              34.36.57.103:443   users:(("claude",pid=156922,fd=30))
+tcp   TIME-WAIT 0      0                           10.1.11.18:41934                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60962                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41946                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60878                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34050                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41912                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34116                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60862                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:42012                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34028                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41910                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34080                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41976                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60930                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60944                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:45808                              34.36.57.103:443   users:(("claude",pid=156922,fd=28))
+tcp   TIME-WAIT 0      0                           10.1.11.18:42400                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34076                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34052                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41920                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:59156                           209.177.145.120:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41936                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41974                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:41902                              34.36.57.103:443   users:(("claude",pid=156922,fd=26))
+tcp   ESTAB     0      725                         10.1.11.18:45840                              34.36.57.103:443   users:(("claude",pid=156922,fd=33))
+tcp   TIME-WAIT 0      0                           10.1.11.18:41988                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34068                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60900                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34144                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41940                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60884                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41926                              34.36.57.103:443                                      
+tcp   ESTAB     0      28276                   100.111.114.84:22                                  100.64.31.8:60608                                    
+tcp   TIME-WAIT 0      0                           10.1.11.18:34130                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41904                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34104                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34088                              34.36.57.103:443                                      
+tcp   ESTAB     0      725                         10.1.11.18:45822                              34.36.57.103:443   users:(("claude",pid=156922,fd=29))
+tcp   TIME-WAIT 0      0                           10.1.11.18:42028                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34034                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:32784                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60952                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34098                              34.36.57.103:443                                      
+tcp   ESTAB     0      1945                        10.1.11.18:41896                              34.36.57.103:443   users:(("claude",pid=156922,fd=25))
+tcp   TIME-WAIT 0      0                           10.1.11.18:42404                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60958                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41960                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60986                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41930                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60860                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:42000                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41932                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34112                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34082                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60972                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:32768                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60926                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60910                              34.36.57.103:443                                      
+tcp   LISTEN    0      4096                              [::]:3000                                       [::]:*                                        
+tcp   LISTEN    0      4096                                 *:80                                            *:*                                        
+tcp   LISTEN    0      4096                              [::]:111                                        [::]:*                                        
+tcp   LISTEN    0      4096                              [::]:22                                         [::]:*                                        
+tcp   LISTEN    0      4096                                 *:443                                           *:*                                        
+tcp   LISTEN    0      4096                              [::]:8000                                       [::]:*                                        
+tcp   LISTEN    0      4096                                 *:11434                                         *:*                                        
+tcp   LISTEN    0      4096                              [::]:9443                                       [::]:*                                        
+tcp   LISTEN    0      4096                                 *:9100                                          *:*                                        
+tcp   LISTEN    0      4096       [fd7a:115c:a1e0::a301:7256]:56464                                      [::]:*                                        
+tcp   ESTAB     0      0           [2601:19b:4100:1952::1a4d]:49748                           [2607:6bc0::10]:443   users:(("claude",pid=156922,fd=53))
+tcp   ESTAB     0      0           [2601:19b:4100:1952::1a4d]:56546                       [2606:b740:49::106]:80                                       
+tcp   TIME-WAIT 0      0           [2601:19b:4100:1952::1a4d]:40432                           [2607:6bc0::10]:443                                      
+tcp   ESTAB     0      0                  [::ffff:10.1.11.18]:9100                       [::ffff:10.1.11.112]:24218                                    
+tcp   TIME-WAIT 0      0           [2601:19b:4100:1952::1a4d]:57052                           [2607:6bc0::10]:443                                      
+tcp   TIME-WAIT 0      0           [2601:19b:4100:1952::1a4d]:51068                           [2607:6bc0::10]:443                                      
