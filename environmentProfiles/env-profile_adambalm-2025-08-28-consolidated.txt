@@ -1,0 +1,1013 @@
+Environment Profile — adambalm — 2025-08-28
+======================================
+
+
+===== ai-tools.txt =====
+=== AI Tools and Models ===
+
+-- Ollama --
+Error: unknown command "version" for "ollama"
+ollama: not found
+
+-- Ollama Models --
+NAME                    ID              SIZE      MODIFIED    
+qwen2.5vl:7b            5ced39dfa4ba    6.0 GB    11 days ago    
+llama3.2:latest         a80c4f17acd5    2.0 GB    2 weeks ago    
+qwen2.5-coder:latest    dae161e27b0e    4.7 GB    3 weeks ago    
+deepseek-r1:latest      6995872bfe4c    5.2 GB    3 weeks ago    
+llama3:latest           365c0bd3c000    4.7 GB    3 weeks ago    
+qwq:latest              009cb3f08d74    19 GB     3 weeks ago    
+qwen:latest             d53d04290064    2.3 GB    3 weeks ago    
+gemma3:latest           a2af6cc3eb7f    3.3 GB    3 weeks ago    
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+Model: 
+Error: model is required
+
+-- AI-related processes --
+ollama      1240  0.0  0.0 14921976 60196 ?      Ssl  Aug26   0:10 /usr/local/bin/ollama serve
+
+-- Python AI Libraries --
+numpy                   1.26.4
+pandas                  2.1.4+dfsg
+scikit-learn            1.4.1.post1
+
+
+===== dev-tools.txt =====
+=== Development Toolchains ===
+/bin/bash: line 1: {: command not found
+head: cannot open 'echo' for reading: No such file or directory
+head: cannot open 'Dev tools basic collected' for reading: No such file or directory
+head: cannot open '}' for reading: No such file or directory
+git version 2.43.0
+Python 3.12.3
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+v22.18.0
+10.9.3
+-- Additional Tools --
+pyenv: not found
+conda: not found
+poetry: not found
+pipx: not found
+1.22.22
+10.14.0
+-- Compilers --
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+clang: not found
+cmake: not found
+make: not found
+
+
+===== docker-info.txt =====
+=== Docker Information ===
+
+-- Docker Version --
+Client: Docker Engine - Community
+ Version:           28.3.3
+ API version:       1.51
+ Go version:        go1.24.5
+ Git commit:        980b856
+ Built:             Fri Jul 25 11:34:09 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          28.3.3
+  API version:      1.51 (minimum version 1.24)
+  Go version:       go1.24.5
+  Git commit:       bea959c
+  Built:            Fri Jul 25 11:34:09 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.27
+  GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+ runc:
+  Version:          1.2.5
+  GitCommit:        v1.2.5-0-g59923ef
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+-- Docker Info --
+Client: Docker Engine - Community
+ Version:    28.3.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.26.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.39.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 2
+  Running: 2
+  Paused: 0
+  Stopped: 0
+ Images: 4
+ Server Version: 28.3.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-78-generic
+ Operating System: Ubuntu 24.04.3 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 62.57GiB
+ Name: adambalm
+ ID: d1a59bc7-824f-4a66-ad85-d9c6a53e83b1
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+
+-- Docker Containers --
+CONTAINER ID   IMAGE                                COMMAND           CREATED       STATUS                PORTS                                                                                                NAMES
+3006b6c553d2   ghcr.io/open-webui/open-webui:main   "bash start.sh"   3 weeks ago   Up 2 days (healthy)   0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp                                                          open-webui
+626f10afe9e3   portainer/portainer-ce:lts           "/portainer"      3 weeks ago   Up 2 days             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp   portainer
+
+-- Docker Images --
+REPOSITORY                      TAG       IMAGE ID       CREATED        SIZE
+ghcr.io/open-webui/open-webui   cuda      2017746e4b67   4 weeks ago    10.7GB
+ghcr.io/open-webui/open-webui   main      ca42d907c22d   4 weeks ago    4.78GB
+portainer/portainer-ce          lts       71de3839351a   8 weeks ago    268MB
+hello-world                     latest    74cc54e27dc4   7 months ago   10.1kB
+
+-- Docker Compose Files in Home --
+
+
+===== editors-tools.txt =====
+=== Editors and Tools ===
+
+-- Code Server/VSCode --
+code-server: not found
+
+-- GitHub CLI --
+gh version 2.45.0 (2025-07-18 Ubuntu 2.45.0-1ubuntu0.3)
+https://github.com/cli/cli/releases/tag/v2.45.0
+
+-- Terminal Multiplexers --
+tmux 3.4
+Screen version 4.09.01 (GNU) 20-Aug-23
+
+
+===== network-info.txt =====
+=== Networking Information ===
+
+-- IP Addresses --
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eno1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 04:42:1a:96:ce:54 brd ff:ff:ff:ff:ff:ff
+    altname enp0s31f6
+    inet 10.1.11.18/24 metric 100 brd 10.1.11.255 scope global dynamic eno1
+       valid_lft 6446sec preferred_lft 6446sec
+    inet6 2601:19b:4100:1952::1a4d/128 scope global dynamic noprefixroute 
+       valid_lft 7125sec preferred_lft 4425sec
+    inet6 2601:19b:4100:1952:642:1aff:fe96:ce54/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 85857sec preferred_lft 13857sec
+    inet6 fe80::642:1aff:fe96:ce54/64 scope link 
+       valid_lft forever preferred_lft forever
+3: tailscale0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet 100.111.114.84/32 scope global tailscale0
+       valid_lft forever preferred_lft forever
+    inet6 fd7a:115c:a1e0::a301:7256/128 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::93a:9590:848:bd8a/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 5e:da:84:b5:d9:42 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5cda:84ff:feb5:d942/64 scope link 
+       valid_lft forever preferred_lft forever
+5: veth97ade73@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 4e:8d:b2:28:2a:48 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::4c8d:b2ff:fe28:2a48/64 scope link 
+       valid_lft forever preferred_lft forever
+6: veth30ca480@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 72:6f:1e:a1:cb:8d brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::706f:1eff:fea1:cb8d/64 scope link 
+       valid_lft forever preferred_lft forever
+
+-- Routing Table --
+default via 10.1.11.1 dev eno1 proto dhcp src 10.1.11.18 metric 100 
+10.1.11.0/24 dev eno1 proto kernel scope link src 10.1.11.18 metric 100 
+10.1.11.1 dev eno1 proto dhcp scope link src 10.1.11.18 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+
+-- DNS Configuration --
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs should typically not access this file directly, but only
+# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+# different way, replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+search tail069d40.ts.net goepp.net
+
+-- Listening Ports --
+State  Recv-Q Send-Q               Local Address:Port  Peer Address:PortProcess
+LISTEN 0      4096                 127.0.0.53%lo:53         0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:3000       0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:111        0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:22         0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:8000       0.0.0.0:*          
+LISTEN 0      4096                100.111.114.84:56214      0.0.0.0:*          
+LISTEN 0      4096                       0.0.0.0:9443       0.0.0.0:*          
+LISTEN 0      4096                    127.0.0.54:53         0.0.0.0:*          
+LISTEN 0      4096                     127.0.0.1:2019       0.0.0.0:*          
+LISTEN 0      4096                          [::]:3000          [::]:*          
+LISTEN 0      4096                             *:80               *:*          
+LISTEN 0      4096                          [::]:111           [::]:*          
+LISTEN 0      4096                          [::]:22            [::]:*          
+LISTEN 0      4096                             *:443              *:*          
+LISTEN 0      4096                          [::]:8000          [::]:*          
+LISTEN 0      4096                             *:11434            *:*          
+LISTEN 0      4096                          [::]:9443          [::]:*          
+LISTEN 0      4096                             *:9100             *:*          
+LISTEN 0      4096   [fd7a:115c:a1e0::a301:7256]:56464         [::]:*          
+
+-- All Network Connections (first 100 lines) --
+Netid State     Recv-Q Send-Q                   Local Address:Port                               Peer Address:Port Process                             
+udp   UNCONN    0      0                           127.0.0.54:53                                      0.0.0.0:*                                        
+udp   UNCONN    0      0                        127.0.0.53%lo:53                                      0.0.0.0:*                                        
+udp   UNCONN    0      0                      10.1.11.18%eno1:68                                      0.0.0.0:*                                        
+udp   UNCONN    0      0                              0.0.0.0:111                                     0.0.0.0:*                                        
+udp   UNCONN    0      0                              0.0.0.0:41641                                   0.0.0.0:*                                        
+udp   UNCONN    0      0                              0.0.0.0:52236                                   0.0.0.0:*                                        
+udp   UNCONN    0      0                                 [::]:111                                        [::]:*                                        
+udp   UNCONN    0      0                                    *:443                                           *:*                                        
+udp   UNCONN    0      0      [fe80::642:1aff:fe96:ce54]%eno1:546                                        [::]:*                                        
+udp   UNCONN    0      0                                 [::]:41641                                      [::]:*                                        
+tcp   LISTEN    0      4096                     127.0.0.53%lo:53                                      0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:3000                                    0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:111                                     0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:22                                      0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:8000                                    0.0.0.0:*                                        
+tcp   LISTEN    0      4096                    100.111.114.84:56214                                   0.0.0.0:*                                        
+tcp   LISTEN    0      4096                           0.0.0.0:9443                                    0.0.0.0:*                                        
+tcp   LISTEN    0      4096                        127.0.0.54:53                                      0.0.0.0:*                                        
+tcp   LISTEN    0      4096                         127.0.0.1:2019                                    0.0.0.0:*                                        
+tcp   TIME-WAIT 0      0                           10.1.11.18:42032                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41950                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:41892                              34.36.57.103:443   users:(("claude",pid=156922,fd=24))
+tcp   ESTAB     0      725                         10.1.11.18:45834                              34.36.57.103:443   users:(("claude",pid=156922,fd=31))
+tcp   TIME-WAIT 0      0                           10.1.11.18:60956                              34.36.57.103:443                                      
+tcp   ESTAB     0      725                         10.1.11.18:45830                              34.36.57.103:443   users:(("claude",pid=156922,fd=30))
+tcp   TIME-WAIT 0      0                           10.1.11.18:41934                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60962                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41946                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60878                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34050                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41912                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34116                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60862                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:42012                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34028                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41910                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34080                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41976                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60930                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60944                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:45808                              34.36.57.103:443   users:(("claude",pid=156922,fd=28))
+tcp   TIME-WAIT 0      0                           10.1.11.18:42400                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34076                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34052                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41920                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:59156                           209.177.145.120:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41936                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41974                              34.36.57.103:443                                      
+tcp   ESTAB     0      0                           10.1.11.18:41902                              34.36.57.103:443   users:(("claude",pid=156922,fd=26))
+tcp   ESTAB     0      725                         10.1.11.18:45840                              34.36.57.103:443   users:(("claude",pid=156922,fd=33))
+tcp   TIME-WAIT 0      0                           10.1.11.18:41988                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34068                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60900                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34144                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41940                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60884                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41926                              34.36.57.103:443                                      
+tcp   ESTAB     0      28276                   100.111.114.84:22                                  100.64.31.8:60608                                    
+tcp   TIME-WAIT 0      0                           10.1.11.18:34130                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41904                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34104                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34088                              34.36.57.103:443                                      
+tcp   ESTAB     0      725                         10.1.11.18:45822                              34.36.57.103:443   users:(("claude",pid=156922,fd=29))
+tcp   TIME-WAIT 0      0                           10.1.11.18:42028                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34034                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:32784                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60952                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34098                              34.36.57.103:443                                      
+tcp   ESTAB     0      1945                        10.1.11.18:41896                              34.36.57.103:443   users:(("claude",pid=156922,fd=25))
+tcp   TIME-WAIT 0      0                           10.1.11.18:42404                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60958                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41960                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60986                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41930                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60860                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:42000                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:41932                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34112                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:34082                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60972                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:32768                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60926                              34.36.57.103:443                                      
+tcp   TIME-WAIT 0      0                           10.1.11.18:60910                              34.36.57.103:443                                      
+tcp   LISTEN    0      4096                              [::]:3000                                       [::]:*                                        
+tcp   LISTEN    0      4096                                 *:80                                            *:*                                        
+tcp   LISTEN    0      4096                              [::]:111                                        [::]:*                                        
+tcp   LISTEN    0      4096                              [::]:22                                         [::]:*                                        
+tcp   LISTEN    0      4096                                 *:443                                           *:*                                        
+tcp   LISTEN    0      4096                              [::]:8000                                       [::]:*                                        
+tcp   LISTEN    0      4096                                 *:11434                                         *:*                                        
+tcp   LISTEN    0      4096                              [::]:9443                                       [::]:*                                        
+tcp   LISTEN    0      4096                                 *:9100                                          *:*                                        
+tcp   LISTEN    0      4096       [fd7a:115c:a1e0::a301:7256]:56464                                      [::]:*                                        
+tcp   ESTAB     0      0           [2601:19b:4100:1952::1a4d]:49748                           [2607:6bc0::10]:443   users:(("claude",pid=156922,fd=53))
+tcp   ESTAB     0      0           [2601:19b:4100:1952::1a4d]:56546                       [2606:b740:49::106]:80                                       
+tcp   TIME-WAIT 0      0           [2601:19b:4100:1952::1a4d]:40432                           [2607:6bc0::10]:443                                      
+tcp   ESTAB     0      0                  [::ffff:10.1.11.18]:9100                       [::ffff:10.1.11.112]:24218                                    
+tcp   TIME-WAIT 0      0           [2601:19b:4100:1952::1a4d]:57052                           [2607:6bc0::10]:443                                      
+tcp   TIME-WAIT 0      0           [2601:19b:4100:1952::1a4d]:51068                           [2607:6bc0::10]:443                                      
+
+
+===== os-info.txt =====
+=== OS Information ===
+
+-- uname -a --
+Linux adambalm 6.8.0-78-generic #78-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 11:34:18 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+-- /etc/os-release --
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+-- uptime --
+ 22:32:39 up 2 days,  6:11,  2 users,  load average: 0.40, 0.12, 0.04
+
+-- CPU Info --
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        39 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               12
+On-line CPU(s) list:                  0-11
+Vendor ID:                            GenuineIntel
+Model name:                           11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz
+CPU family:                           6
+Model:                                167
+Thread(s) per core:                   2
+Core(s) per socket:                   6
+Socket(s):                            1
+Stepping:                             1
+CPU(s) scaling MHz:                   47%
+CPU max MHz:                          4400.0000
+CPU min MHz:                          800.0000
+BogoMIPS:                             5184.00
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+L1d cache:                            288 KiB (6 instances)
+L1i cache:                            192 KiB (6 instances)
+L2 cache:                             3 MiB (6 instances)
+L3 cache:                             12 MiB (1 instance)
+NUMA node(s):                         1
+NUMA node0 CPU(s):                    0-11
+Vulnerability Gather data sampling:   Mitigation; Microcode
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:   Not affected
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+
+-- Memory Info --
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       2.3Gi        57Gi       2.1Mi       3.0Gi        60Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+-- Disk Usage --
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              6.3G  1.8M  6.3G   1% /run
+efivarfs                           192K   73K  115K  39% /sys/firmware/efi/efivars
+/dev/mapper/ubuntu--vg-ubuntu--lv  1.8T  118G  1.6T   7% /
+tmpfs                               32G     0   32G   0% /dev/shm
+tmpfs                              5.0M   12K  5.0M   1% /run/lock
+/dev/nvme0n1p2                     2.0G  193M  1.6G  11% /boot
+/dev/nvme0n1p1                     1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                              6.3G   20K  6.3G   1% /run/user/1001
+
+-- Block Devices --
+NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1                   259:0    0 931.5G  0 disk 
+├─nvme0n1p1               259:2    0     1G  0 part /boot/efi
+├─nvme0n1p2               259:3    0     2G  0 part /boot
+└─nvme0n1p3               259:4    0 928.5G  0 part 
+  └─ubuntu--vg-ubuntu--lv 252:0    0   1.8T  0 lvm  /
+nvme1n1                   259:1    0 931.5G  0 disk 
+└─ubuntu--vg-ubuntu--lv   252:0    0   1.8T  0 lvm  /
+
+
+===== packages.txt =====
+=== Package Managers ===
+
+-- APT Manually Installed (top 200) --
+acl
+alsa-utils
+apt-transport-https
+base-files
+bash
+bash-completion
+bsdutils
+ca-certificates
+caddy
+ceph-common
+cifs-utils
+containerd.io
+curl
+dash
+debian-archive-keyring
+debian-keyring
+diffutils
+docker-buildx-plugin
+docker-ce
+docker-ce-cli
+docker-compose-plugin
+efibootmgr
+eog
+findutils
+gh
+git
+gitleaks
+gnupg
+google-chrome-stable
+grep
+grub-efi-amd64
+grub-efi-amd64-signed
+gstreamer1.0-libav
+gzip
+hostname
+iftop
+init
+keyutils
+libavif16
+libblas-dev
+libevent-2.1-7t64
+libflite1
+libgstreamer-plugins-bad1.0-0
+libgtk-4-1
+libhdf5-dev
+liblapack-dev
+libopenblas-dev
+linux-generic
+login
+lsb-release
+ncdu
+ncurses-base
+ncurses-bin
+nfs-common
+nvidia-driver-575-server-open
+openssh-server
+pkg-config
+prometheus-node-exporter
+python3
+python3-matplotlib
+python3-numpy
+python3-opencv
+python3-pandas
+python3-pip
+python3-scipy
+python3-sklearn
+python3-venv
+qemu-guest-agent
+shim-signed
+tailscale
+tailscale-archive-keyring
+tesseract-ocr
+tesseract-ocr-eng
+ubuntu-minimal
+ubuntu-server
+ubuntu-server-minimal
+ubuntu-standard
+unzip
+util-linux
+vim
+wget
+zsh
+
+-- DPKG Installed (top 80) --
+ii  acl                                  2.3.2-1build1.1                         amd64        access control list - utilities
+ii  adduser                              3.137ubuntu1                            all          add and remove users and groups
+ii  adwaita-icon-theme                   46.0-1                                  all          default icon theme of GNOME
+ii  alsa-topology-conf                   1.2.5.1-2                               all          ALSA topology configuration files
+ii  alsa-ucm-conf                        1.2.10-1ubuntu5.7                       all          ALSA Use Case Manager configuration files
+ii  alsa-utils                           1.2.9-1ubuntu5                          amd64        Utilities for configuring and using ALSA
+ii  amd64-microcode                      3.20250311.1ubuntu0.24.04.1             amd64        Processor microcode firmware for AMD CPUs
+ii  apparmor                             4.0.1really4.0.1-0ubuntu0.24.04.4       amd64        user-space parser utility for AppArmor
+ii  apport                               2.28.1-0ubuntu3.8                       all          automatically generate crash reports for debugging
+ii  apport-core-dump-handler             2.28.1-0ubuntu3.8                       all          Kernel core dump handler for Apport
+ii  apport-symptoms                      0.25                                    all          symptom scripts for apport
+ii  appstream                            1.0.2-1build6                           amd64        Software component metadata management
+ii  apt                                  2.8.3                                   amd64        commandline package manager
+ii  apt-transport-https                  2.8.3                                   all          transitional package for https support
+ii  apt-utils                            2.8.3                                   amd64        package management related utility programs
+ii  aspell                               0.60.8.1-1build1                        amd64        GNU Aspell spell-checker
+ii  aspell-en                            2020.12.07-0-1                          all          English dictionary for GNU Aspell
+ii  at-spi2-common                       2.52.0-1build1                          all          Assistive Technology Service Provider Interface (common files)
+ii  at-spi2-core                         2.52.0-1build1                          amd64        Assistive Technology Service Provider Interface (D-Bus core)
+ii  base-files                           13ubuntu10.3                            amd64        Debian base system miscellaneous files
+ii  base-passwd                          3.6.3build1                             amd64        Debian base system master password and group files
+ii  bash                                 5.2.21-2ubuntu4                         amd64        GNU Bourne Again SHell
+ii  bash-completion                      1:2.11-8                                all          programmable completion for the bash shell
+ii  bc                                   1.07.1-3ubuntu4                         amd64        GNU bc arbitrary precision calculator language
+ii  bcache-tools                         1.0.8-5build1                           amd64        bcache userspace tools
+ii  bind9-dnsutils                       1:9.18.30-0ubuntu0.24.04.2              amd64        Clients provided with BIND 9
+ii  bind9-host                           1:9.18.30-0ubuntu0.24.04.2              amd64        DNS Lookup Utility
+ii  bind9-libs:amd64                     1:9.18.30-0ubuntu0.24.04.2              amd64        Shared Libraries used by BIND 9
+ii  binutils                             2.42-4ubuntu2.5                         amd64        GNU assembler, linker and binary utilities
+ii  binutils-common:amd64                2.42-4ubuntu2.5                         amd64        Common files for the GNU assembler, linker and binary utilities
+ii  binutils-x86-64-linux-gnu            2.42-4ubuntu2.5                         amd64        GNU binary utilities, for x86-64-linux-gnu target
+ii  blt                                  2.5.3+dfsg-7build1                      amd64        graphics extension library for Tcl/Tk - run-time
+ii  bolt                                 0.9.7-1                                 amd64        system daemon to manage thunderbolt 3 devices
+ii  bpfcc-tools                          0.29.1+ds-1ubuntu7                      all          tools for BPF Compiler Collection (BCC)
+ii  bpftrace                             0.20.2-1ubuntu4.3                       amd64        high-level tracing language for Linux eBPF
+ii  bsdextrautils                        2.39.3-9ubuntu6.3                       amd64        extra utilities from 4.4BSD-Lite
+ii  bsdutils                             1:2.39.3-9ubuntu6.3                     amd64        basic utilities from 4.4BSD-Lite
+ii  btrfs-progs                          6.6.3-1.1build2                         amd64        Checksumming Copy on Write Filesystem utilities
+ii  bubblewrap                           0.9.0-1ubuntu0.1                        amd64        utility for unprivileged chroot and namespace manipulation
+ii  build-essential                      12.10ubuntu1                            amd64        Informational list of build-essential packages
+ii  busybox-initramfs                    1:1.36.1-6ubuntu3.1                     amd64        Standalone shell setup for initramfs
+ii  busybox-static                       1:1.36.1-6ubuntu3.1                     amd64        Standalone rescue shell with tons of builtin utilities
+ii  byobu                                6.11-0ubuntu1                           all          text window manager, shell multiplexer, integrated DevOps environment
+ii  bzip2                                1.0.8-5.1build0.1                       amd64        high-quality block-sorting file compressor - utilities
+ii  ca-certificates                      20240203                                all          Common CA certificates
+ii  caddy                                2.10.2                                  amd64        Caddy - Powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
+ii  ceph-common                          19.2.1-0ubuntu0.24.04.2                 amd64        common utilities to mount and interact with a ceph storage cluster
+ii  cifs-utils                           2:7.0-2ubuntu0.2                        amd64        Common Internet File System utilities
+ii  cloud-guest-utils                    0.33-1                                  all          cloud guest utilities
+ii  cloud-init                           25.1.4-0ubuntu0~24.04.1                 all          initialization and customization tool for cloud instances
+ii  cloud-initramfs-copymods             0.49~24.04.1                            all          copy initramfs modules into root filesystem for later use
+ii  cloud-initramfs-dyn-netconf          0.49~24.04.1                            all          write a network interface file in /run for BOOTIF
+ii  command-not-found                    23.04.0                                 all          Suggest installation of packages in interactive bash sessions
+ii  console-setup                        1.226ubuntu1                            all          console font and keymap setup program
+ii  console-setup-linux                  1.226ubuntu1                            all          Linux specific part of console-setup
+ii  containerd.io                        1.7.27-1                                amd64        An open and reliable container runtime
+ii  coreutils                            9.4-3ubuntu6                            amd64        GNU core utilities
+ii  cpio                                 2.15+dfsg-1ubuntu2                      amd64        GNU cpio -- a program to manage archives of files
+ii  cpp                                  4:13.2.0-7ubuntu1                       amd64        GNU C preprocessor (cpp)
+ii  cpp-13                               13.3.0-6ubuntu2~24.04                   amd64        GNU C preprocessor
+ii  cpp-13-x86-64-linux-gnu              13.3.0-6ubuntu2~24.04                   amd64        GNU C preprocessor for x86_64-linux-gnu
+ii  cpp-x86-64-linux-gnu                 4:13.2.0-7ubuntu1                       amd64        GNU C preprocessor (cpp) for the amd64 architecture
+ii  cron                                 3.0pl1-184ubuntu2                       amd64        process scheduling daemon
+ii  cron-daemon-common                   3.0pl1-184ubuntu2                       all          process scheduling daemon's configuration files
+ii  cryptsetup                           2:2.7.0-1ubuntu4.2                      amd64        disk encryption support - startup scripts
+ii  cryptsetup-bin                       2:2.7.0-1ubuntu4.2                      amd64        disk encryption support - command line tools
+ii  cryptsetup-initramfs                 2:2.7.0-1ubuntu4.2                      all          disk encryption support - initramfs integration
+ii  curl                                 8.5.0-2ubuntu10.6                       amd64        command line tool for transferring data with URL syntax
+ii  dash                                 0.5.12-6ubuntu5                         amd64        POSIX-compliant shell
+ii  dbus                                 1.14.10-4ubuntu4.1                      amd64        simple interprocess messaging system (system message bus)
+ii  dbus-bin                             1.14.10-4ubuntu4.1                      amd64        simple interprocess messaging system (command line utilities)
+ii  dbus-daemon                          1.14.10-4ubuntu4.1                      amd64        simple interprocess messaging system (reference message bus)
+ii  dbus-session-bus-common              1.14.10-4ubuntu4.1                      all          simple interprocess messaging system (session bus configuration)
+ii  dbus-system-bus-common               1.14.10-4ubuntu4.1                      all          simple interprocess messaging system (system bus configuration)
+ii  dbus-user-session                    1.14.10-4ubuntu4.1                      amd64        simple interprocess messaging system (systemd --user integration)
+ii  dconf-gsettings-backend:amd64        0.40.0-4build2                          amd64        simple configuration storage system - GSettings back-end
+ii  dconf-service                        0.40.0-4build2                          amd64        simple configuration storage system - D-Bus service
+ii  debconf                              1.5.86ubuntu1                           all          Debian configuration management system
+ii  debconf-i18n                         1.5.86ubuntu1                           all          full internationalization support for debconf
+ii  debian-archive-keyring               2023.4ubuntu1                           all          GnuPG archive keys of the Debian archive
+
+-- Snap Packages --
+
+-- Python Packages (top 200) --
+Package                 Version
+----------------------- --------------
+appdirs                 1.4.4
+attrs                   23.2.0
+Automat                 22.10.0
+Babel                   2.10.3
+bcc                     0.29.1
+bcrypt                  3.2.2
+beautifulsoup4          4.12.3
+blinker                 1.7.0
+boto3                   1.34.46
+botocore                1.34.46
+Bottleneck              1.3.5
+Brotli                  1.1.0
+ceph                    1.0.0
+cephfs                  2.0.0
+certifi                 2023.11.17
+chardet                 5.2.0
+click                   8.1.6
+cloud-init              25.1.4
+colorama                0.4.6
+command-not-found       0.3
+configobj               5.0.8
+constantly              23.10.4
+contourpy               1.0.7
+cryptography            41.0.7
+cssselect               1.2.0
+cycler                  0.11.0
+dbus-python             1.3.2
+decorator               5.1.1
+defusedxml              0.7.1
+distro                  1.9.0
+distro-info             1.7+build1
+et-xmlfile              1.0.1
+fonttools               4.46.0
+fs                      2.4.16
+html5lib                1.1
+httplib2                0.20.4
+hyperlink               21.0.0
+idna                    3.6
+incremental             22.10.0
+iniconfig               1.1.1
+Jinja2                  3.1.2
+jmespath                1.0.1
+joblib                  1.3.2
+jsonpatch               1.32
+jsonpointer             2.0
+jsonschema              4.10.3
+kiwisolver              0.0.0
+launchpadlib            1.11.0
+lazr.restfulclient      0.14.6
+lazr.uri                1.0.6
+lxml                    5.2.1
+lz4                     4.0.2+dfsg
+markdown-it-py          3.0.0
+MarkupSafe              2.1.5
+matplotlib              3.6.3
+mdurl                   0.1.2
+mpmath                  0.0.0
+netaddr                 0.8.0
+netifaces               0.11.0
+numexpr                 2.9.0
+numpy                   1.26.4
+oauthlib                3.2.2
+odfpy                   1.4.2
+olefile                 0.46
+openpyxl                3.1.2
+packaging               24.0
+pandas                  2.1.4+dfsg
+pexpect                 4.9.0
+pillow                  10.2.0
+pip                     24.0
+pluggy                  1.4.0
+prettytable             3.6.0
+prometheus-client       0.19.0
+psutil                  5.9.8
+ptyprocess              0.7.0
+py-cpuinfo              9.0.0
+pyasn1                  0.4.8
+pyasn1-modules          0.2.8
+Pygments                2.17.2
+PyGObject               3.48.2
+PyHamcrest              2.1.0
+PyJWT                   2.7.0
+pyOpenSSL               23.2.0
+pyparsing               3.1.1
+pyrsistent              0.20.0
+pyserial                3.5
+pytest                  7.4.4
+python-apt              2.7.7+ubuntu5
+python-dateutil         2.8.2
+python-debian           0.1.49+ubuntu2
+python-magic            0.4.27
+pytz                    2024.1
+PyYAML                  6.0.1
+rados                   2.0.0
+rbd                     2.0.0
+requests                2.31.0
+rich                    13.7.1
+s3transfer              0.10.1
+scikit-learn            1.4.1.post1
+SciPy                   1.11.4
+screen-resolution-extra 0.0.0
+service-identity        24.1.0
+setuptools              68.1.2
+simplejson              3.19.2
+six                     1.16.0
+sos                     4.8.2
+soupsieve               2.5
+ssh-import-id           5.11
+sympy                   1.12
+systemd-python          235
+tables                  3.9.2
+threadpoolctl           3.1.0
+Twisted                 24.3.0
+ubuntu-drivers-common   0.0.0
+ubuntu-pro-client       8001
+ufoLib2                 0.16.0
+ufw                     0.36.2
+unattended-upgrades     0.1
+unicodedata2            15.1.0
+urllib3                 2.0.7
+wadllib                 1.3.6
+wcwidth                 0.2.5
+webencodings            0.5.1
+wheel                   0.42.0
+xkit                    0.0.0
+zope.interface          6.1
+
+-- NPM Global Packages --
+/home/ed/.nvm/versions/node/v22.18.0/lib
+├── @anthropic-ai/claude-code@1.0.96
+├── @modelcontextprotocol/server-github@2025.4.8
+├── @movibe/memory-bank-mcp@0.4.1
+├── @openai/codex@0.12.0
+├── @playwright/mcp@0.0.34
+├── corepack@0.33.0
+├── npm@10.9.3
+└── ref-tools-mcp@3.0.0
+
+
+
+===== repositories.txt =====
+=== Git Repositories ===
+
+-- Git repositories in home directory (max depth 2) --
+/home/ed/meta-ops-validator
+/home/ed/ml-roadmap
+/home/ed/.nvm
+/home/ed/ghost-writer
+/home/ed/context-integrity
+
+
+===== security-schedule.txt =====
+=== Security and Scheduled Tasks ===
+
+-- System Timers --
+NEXT                                 LEFT LAST                           PASSED UNIT                                             ACTIVATES
+Thu 2025-08-28 22:46:09 EDT          5min Thu 2025-08-28 22:31:09 EDT  9min ago prometheus-node-exporter-apt.timer               prometheus-node-exporter-apt.service
+Thu 2025-08-28 22:46:09 EDT          5min Thu 2025-08-28 22:31:09 EDT  9min ago prometheus-node-exporter-nvme.timer              prometheus-node-exporter-nvme.service
+Thu 2025-08-28 22:50:00 EDT          9min Thu 2025-08-28 22:40:04 EDT    7s ago sysstat-collect.timer                            sysstat-collect.service
+Thu 2025-08-28 23:29:44 EDT         49min Thu 2025-08-28 22:00:29 EDT 39min ago fwupd-refresh.timer                              fwupd-refresh.service
+Fri 2025-08-29 00:00:00 EDT      1h 19min Thu 2025-08-28 00:00:09 EDT   22h ago dpkg-db-backup.timer                             dpkg-db-backup.service
+Fri 2025-08-29 00:00:00 EDT      1h 19min Thu 2025-08-28 00:00:09 EDT   22h ago logrotate.timer                                  logrotate.service
+Fri 2025-08-29 00:07:00 EDT      1h 26min Thu 2025-08-28 00:07:09 EDT   22h ago sysstat-summary.timer                            sysstat-summary.service
+Fri 2025-08-29 00:52:46 EDT      2h 12min Thu 2025-08-28 15:28:29 EDT    7h ago motd-news.timer                                  motd-news.service
+Fri 2025-08-29 01:52:00 EDT      3h 11min Thu 2025-08-28 10:44:29 EDT   11h ago man-db.timer                                     man-db.service
+Fri 2025-08-29 05:39:50 EDT            6h Thu 2025-08-28 13:12:09 EDT    9h ago apt-daily.timer                                  apt-daily.service
+Fri 2025-08-29 06:51:50 EDT            8h Thu 2025-08-28 06:56:09 EDT   15h ago apt-daily-upgrade.timer                          apt-daily-upgrade.service
+Fri 2025-08-29 16:26:09 EDT           17h Thu 2025-08-28 16:26:09 EDT    6h ago update-notifier-download.timer                   update-notifier-download.service
+Fri 2025-08-29 16:36:39 EDT           17h Thu 2025-08-28 16:36:39 EDT    6h ago systemd-tmpfiles-clean.timer                     systemd-tmpfiles-clean.service
+Sun 2025-08-31 03:10:56 EDT        2 days Sun 2025-08-24 03:10:47 EDT         - e2scrub_all.timer                                e2scrub_all.service
+Mon 2025-09-01 00:45:48 EDT        3 days Mon 2025-08-25 01:11:17 EDT         - fstrim.timer                                     fstrim.service
+Fri 2025-09-05 07:23:50 EDT 1 week 0 days Thu 2025-08-28 14:16:02 EDT    8h ago update-notifier-motd.timer                       update-notifier-motd.service
+-                                       - -                                   - apport-autoreport.timer                          apport-autoreport.service
+-                                       - -                                   - prometheus-node-exporter-ipmitool-sensor.timer   prometheus-node-exporter-ipmitool-sensor.service
+-                                       - -                                   - prometheus-node-exporter-mellanox-hca-temp.timer prometheus-node-exporter-mellanox-hca-temp.service
+-                                       - -                                   - prometheus-node-exporter-smartmon.timer          prometheus-node-exporter-smartmon.service
+-                                       - -                                   - snapd.snap-repair.timer                          snapd.snap-repair.service
+-                                       - -                                   - ua-timer.timer                                   ua-timer.service
+
+22 timers listed.
+
+-- User Crontab --
+no crontab for ed
+No user crontab
+
+-- SSH Directory --
+total 40
+drwxr-x---+  2 ed ed 4096 Aug 13 04:33 .
+drwxr-x---+ 19 ed ed 4096 Aug 28 22:31 ..
+-rw-r-----+  1 ed ed  103 Aug 13 04:33 authorized_keys
+-rw-r-----+  1 ed ed  103 Aug  5 02:13 config
+-rw-------+  1 ed ed  411 Aug  4 19:08 id_ed25519
+-rw-r--r--+  1 ed ed  103 Aug  4 19:08 id_ed25519.pub
+-rw-r-----+  1 ed ed 1811 Aug 13 04:22 id_rsa
+-rw-r--r--+  1 ed ed  393 Aug 13 04:22 id_rsa.pub
+-rw-r-----+  1 ed ed  978 Aug  4 19:11 known_hosts
+-rw-r--r--+  1 ed ed  142 Aug  4 18:59 known_hosts.old
+
+
+===== services-info.txt =====
+=== Services Information ===
+
+-- Running Services (filtered) --
+  proc-sys-fs-binfmt_misc.automount                                             loaded active running Arbitrary Executable File Formats File System Automount Point
+  docker-3006b6c553d2b45310b38063f30f9ad1c96486d6638d24a80f2e7e11b1e9abc9.scope loaded active running libcontainer container 3006b6c553d2b45310b38063f30f9ad1c96486d6638d24a80f2e7e11b1e9abc9
+  docker-626f10afe9e38e40dda651a740d7af1f2f90ecbb57c0852b08c917f1b8974a52.scope loaded active running libcontainer container 626f10afe9e38e40dda651a740d7af1f2f90ecbb57c0852b08c917f1b8974a52
+  init.scope                                                                    loaded active running System and Service Manager
+  session-392.scope                                                             loaded active running Session 392 of User ed
+  caddy.service                                                                 loaded active running Caddy
+  containerd.service                                                            loaded active running containerd container runtime
+  cron.service                                                                  loaded active running Regular background program processing daemon
+  dbus.service                                                                  loaded active running D-Bus System Message Bus
+  docker.service                                                                loaded active running Docker Application Container Engine
+  fwupd.service                                                                 loaded active running Firmware update daemon
+  getty@tty1.service                                                            loaded active running Getty on tty1
+  ModemManager.service                                                          loaded active running Modem Manager
+  nvidia-persistenced.service                                                   loaded active running NVIDIA Persistence Daemon
+  ollama.service                                                                loaded active running Ollama Service
+  polkit.service                                                                loaded active running Authorization Manager
+  prometheus-node-exporter.service                                              loaded active running Prometheus exporter for machine metrics
+  rpcbind.service                                                               loaded active running RPC bind portmap service
+  rsyslog.service                                                               loaded active running System Logging Service
+  smartmontools.service                                                         loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  ssh.service                                                                   loaded active running OpenBSD Secure Shell server
+  systemd-journald.service                                                      loaded active running Journal Service
+  systemd-logind.service                                                        loaded active running User Login Management
+  systemd-networkd.service                                                      loaded active running Network Configuration
+  systemd-resolved.service                                                      loaded active running Network Name Resolution
+  systemd-timesyncd.service                                                     loaded active running Network Time Synchronization
+  systemd-udevd.service                                                         loaded active running Rule-based Manager for Device Events and Files
+  tailscaled.service                                                            loaded active running Tailscale node agent
+  thermald.service                                                              loaded active running Thermal Daemon Service
+  udisks2.service                                                               loaded active running Disk Manager
+  unattended-upgrades.service                                                   loaded active running Unattended Upgrades Shutdown
+  upower.service                                                                loaded active running Daemon for power management
+  user@1001.service                                                             loaded active running User Manager for UID 1001
+  dbus.socket                                                                   loaded active running D-Bus System Message Bus Socket
+  docker.socket                                                                 loaded active running Docker Socket for the API
+  rpcbind.socket                                                                loaded active running RPCbind Server Activation Socket
+  ssh.socket                                                                    loaded active running OpenBSD Secure Shell server socket
+  syslog.socket                                                                 loaded active running Syslog Socket
+  systemd-journald-dev-log.socket                                               loaded active running Journal Socket (/dev/log)
+  systemd-journald.socket                                                       loaded active running Journal Socket
+  systemd-networkd.socket                                                       loaded active running Network Service Netlink Socket
+  systemd-udevd-control.socket                                                  loaded active running udev Control Socket
+  systemd-udevd-kernel.socket                                                   loaded active running udev Kernel Socket
+
+-- All Running Services --
+  UNIT                                                                          LOAD   ACTIVE SUB     DESCRIPTION
+  proc-sys-fs-binfmt_misc.automount                                             loaded active running Arbitrary Executable File Formats File System Automount Point
+  docker-3006b6c553d2b45310b38063f30f9ad1c96486d6638d24a80f2e7e11b1e9abc9.scope loaded active running libcontainer container 3006b6c553d2b45310b38063f30f9ad1c96486d6638d24a80f2e7e11b1e9abc9
+  docker-626f10afe9e38e40dda651a740d7af1f2f90ecbb57c0852b08c917f1b8974a52.scope loaded active running libcontainer container 626f10afe9e38e40dda651a740d7af1f2f90ecbb57c0852b08c917f1b8974a52
+  init.scope                                                                    loaded active running System and Service Manager
+  session-392.scope                                                             loaded active running Session 392 of User ed
+  caddy.service                                                                 loaded active running Caddy
+  containerd.service                                                            loaded active running containerd container runtime
+  cron.service                                                                  loaded active running Regular background program processing daemon
+  dbus.service                                                                  loaded active running D-Bus System Message Bus
+  docker.service                                                                loaded active running Docker Application Container Engine
+  fwupd.service                                                                 loaded active running Firmware update daemon
+  getty@tty1.service                                                            loaded active running Getty on tty1
+  ModemManager.service                                                          loaded active running Modem Manager
+  nvidia-persistenced.service                                                   loaded active running NVIDIA Persistence Daemon
+  ollama.service                                                                loaded active running Ollama Service
+  polkit.service                                                                loaded active running Authorization Manager
+  prometheus-node-exporter.service                                              loaded active running Prometheus exporter for machine metrics
+  rpcbind.service                                                               loaded active running RPC bind portmap service
+  rsyslog.service                                                               loaded active running System Logging Service
+  smartmontools.service                                                         loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  ssh.service                                                                   loaded active running OpenBSD Secure Shell server
+  systemd-journald.service                                                      loaded active running Journal Service
+  systemd-logind.service                                                        loaded active running User Login Management
+  systemd-networkd.service                                                      loaded active running Network Configuration
+  systemd-resolved.service                                                      loaded active running Network Name Resolution
+  systemd-timesyncd.service                                                     loaded active running Network Time Synchronization
+  systemd-udevd.service                                                         loaded active running Rule-based Manager for Device Events and Files
+  tailscaled.service                                                            loaded active running Tailscale node agent
+  thermald.service                                                              loaded active running Thermal Daemon Service
+  udisks2.service                                                               loaded active running Disk Manager
+  unattended-upgrades.service                                                   loaded active running Unattended Upgrades Shutdown
+  upower.service                                                                loaded active running Daemon for power management
+  user@1001.service                                                             loaded active running User Manager for UID 1001
+  dbus.socket                                                                   loaded active running D-Bus System Message Bus Socket
+  docker.socket                                                                 loaded active running Docker Socket for the API
+  rpcbind.socket                                                                loaded active running RPCbind Server Activation Socket
+  ssh.socket                                                                    loaded active running OpenBSD Secure Shell server socket
+  syslog.socket                                                                 loaded active running Syslog Socket
+  systemd-journald-dev-log.socket                                               loaded active running Journal Socket (/dev/log)
+  systemd-journald.socket                                                       loaded active running Journal Socket
+  systemd-networkd.socket                                                       loaded active running Network Service Netlink Socket
+  systemd-udevd-control.socket                                                  loaded active running udev Control Socket
+  systemd-udevd-kernel.socket                                                   loaded active running udev Kernel Socket
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+43 loaded units listed.
+
+
+===== specific-services.txt =====
+=== Services (Caddy/Tailscale/Ghost/n8n) ===
+
+-- Caddy --
+v2.10.2 h1:g/gTYjGMD0dec+UgMw8SnfmJ3I9+M2TdvoRL/Ovu6U8=
+
+-- Tailscale --
+1.86.2
+  tailscale commit: c47caa10d6268583103fd4363792f577a584492c
+  long version: 1.86.2-tc47caa10d-gf5d087d04
+  other commit: f5d087d0447069b01b0b15ce03b54419a210d405
+  go version: go1.24.4
+
+-- Ghost/n8n Ports --
+No Ghost/n8n ports found
+
+-- Service Status --
+● caddy.service - Caddy
+     Loaded: loaded (/usr/lib/systemd/system/caddy.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-08-26 16:21:08 EDT; 2 days ago
+       Docs: https://caddyserver.com/docs/
+   Main PID: 1237 (caddy)
+      Tasks: 15 (limit: 76789)
+     Memory: 51.8M (peak: 53.5M)
+        CPU: 20.273s
+     CGroup: /system.slice/caddy.service
+             └─1237 /usr/bin/caddy run --environ --config /etc/caddy/Caddyfile
+
+● tailscaled.service - Tailscale node agent
+     Loaded: loaded (/usr/lib/systemd/system/tailscaled.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-08-26 16:21:00 EDT; 2 days ago
+       Docs: https://tailscale.com/kb/
+   Main PID: 954 (tailscaled)
+     Status: "Connected; adambalm2025@gmail.com; 100.111.114.84 fd7a:115c:a1e0::a301:7256"
+      Tasks: 17 (limit: 76789)
+     Memory: 54.1M (peak: 55.3M)
+        CPU: 2min 26.938s
+     CGroup: /system.slice/tailscaled.service
+
